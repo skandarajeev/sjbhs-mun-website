@@ -1,0 +1,71 @@
+.text-gradient {
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
+            #def9fa 0.89%,
+            #bef3f5 17.23%,
+            #9dedf0 42.04%,
+            #7de7eb 55.12%,
+            #5ce1e6 71.54%,
+            #33bbcf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.mun-gradient {
+    background: radial-gradient(75.20% 41.10% at 50.00% 58.90%, #E4C97C 0%, #E0B055 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mun-typography {
+    font-family: Sk-Modernist;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.7px;
+}
+
+.background-gradient {
+    background: linear-gradient(180deg, rgba(43, 43, 43, 0.00) 0%, rgba(247, 186, 71, 0.21) 100%);
+}
+
+
+.committess {
+    height: 1000px;
+}
+
+.committees-background {
+    background-image: url("./media/Grid.svg");
+
+
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+    background-position: center;
+    z-index: 3;
+
+}
+
+.gradient-zero {
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=2a2a2a&c2=474747&gt=r&gd=dtl
+*/
+    background: #2A2A2A;
+    background: radial-gradient(at left top, #2A2A2A, #474747);
+    opacity: 0.7;
+}
+
+.gradient-zeroOne {
+    /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=84848a&c2=252525&gt=r&gd=dcc
+*/
+    background: #84848A;
+    background: radial-gradient(at center, #84848A, #252525);
+}
