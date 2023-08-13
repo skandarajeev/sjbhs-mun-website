@@ -5,6 +5,7 @@ import circle from "./media/Ellipse 1.svg";
 import bgGradient from "./media/backgroundGradient.png";
 import MyComponent from "./about/page";
 
+
 const Event = (details) => {
   return (
     <div className="mt-[1rem] gradient-zero mx-auto w-[70vw] h-[140px] rounded-lg p-[10px] ">
@@ -27,9 +28,17 @@ export default function Home() {
         rel="stylesheet"
       ></link>
 
+
+
+      {/* NAVBAR */}
+     
+
+      {/* NAVBBAR END */}
+      
+
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-auto h-screen">
+      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%]">
         <div className="">
           <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
             SJBHSMUN 2023
@@ -56,7 +65,7 @@ export default function Home() {
       {/* HERO SECTION END! */}
 
       {/* DATE REVEAL SECTION */}
-      <div className="background-gradient text-center flex flex-col h-[100%]">
+      <div className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[3rem] rounded-[3rem] my-10 ">
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
           OCTOBER
@@ -86,7 +95,7 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      <section className="m-3">
+      <section className="m-[10vh]">
         <div className="committees">
           <div className="committees-background"></div>
 
@@ -100,13 +109,13 @@ export default function Home() {
           </div>
 
           <div>
-            <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
+            <Event name="JCC" details="" />
+            <Event name="KAR SEGGS" details="" />
+            <Event name="UNSC" details="" />
             <MyComponent />
+            <MyComponent />
+            <MyComponent />
+      
           </div>
         </div>
       </section>
