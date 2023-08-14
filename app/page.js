@@ -2,6 +2,7 @@ import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
 import circle from "./media/Ellipse 1.svg";
+import kali from "./media/calendar-by-skanda .svg"
 import bgGradient from "./media/backgroundGradient.png";
 import MyComponent from "./about/page";
 
@@ -18,7 +19,7 @@ const Event = (details) => {
 };
 export default function Home() {
   return (
-    <>
+    <div>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -29,7 +30,7 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-auto h-screen">
+      <div className="flex flex-col items-center justify-center my-auto ">
         <div className="">
           <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
             SJBHSMUN 2023
@@ -55,33 +56,7 @@ export default function Home() {
       </div>
       {/* HERO SECTION END! */}
 
-      {/* DATE REVEAL SECTION */}
-      <div className="background-gradient text-center flex flex-col h-[100%]">
-        <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
-        <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
-          OCTOBER
-        </p>
-
-        <div className="flex m-auto gap-[3rem] mb-2">
-          <p className="font-poppins text-white ">23rd</p>
-          <p className="font-poppins text-white">24th</p>
-          <p className="font-poppins text-white">25th</p>
-        </div>
-
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">12</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">60</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
-        </div>
-
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins text-white">Days</p>
-          <p className="font-poppins text-white">Hours</p>
-          <p className="font-poppins text-white">Minutes</p>
-          <p className="font-poppins text-white">Seconds</p>
-        </div>
-      </div>
+      <Image className=" w-80 md:w-6/12 h-auto md:h-200" src={kali} alt={circle} />
 
       {/* DATE REVEAL END */}
 
@@ -102,7 +77,7 @@ export default function Home() {
           <div>
             <Event name="Comittee Name" details="" />
             <Event name="Comittee Name" details="" />
-            <Event name="Comittee Name" details="" />
+            <Event name="Comittee Name" details="" />+
             <Event name="Comittee Name" details="" />
             <Event name="Comittee Name" details="" />
             <Event name="Comittee Name" details="" />
@@ -110,6 +85,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </div>)
+
 }
