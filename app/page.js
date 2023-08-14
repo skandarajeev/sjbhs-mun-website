@@ -9,17 +9,26 @@ import MyComponent from "./about/page";
 import { motion } from "framer-motion";
 
 
+
+
 const Event = (details) => {
   return (
-    <div className="mt-[1rem] gradient-zero mx-auto w-[70vw] h-[140px] rounded-lg p-[10px] ">
-      <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%]">
+    <div className="outerBox w-[50%] md:w-[30vw] h-[30vh] m-auto my-6 ">
+      
+      <div className=" innerBox mt-[1rem] gradient-zero mx-auto w-[100%] h-[100%] rounded-lg p-[10px] ">
+      <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%] p-6">
         <p className="text-white font-poppins text-center text-5xl align-middle ">
           {details.name}
         </p>
       </div>
+      </div>
     </div>
+    
   );
 };
+
+
+
 export default function Home() {
   return (
     <>
@@ -41,7 +50,7 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%]">
+      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%] ">
         <div className="">
           <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
             SJBHSMUN 2023
@@ -117,9 +126,9 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      <section className="m-[10vh]">
-        <div className="committees">
-          <div className="committees-background"></div>
+      <section className="my-[20%]">
+        <div className="committees committees-background">
+          <div className=""></div>
 
           <div className=" flex flex-col gap-3 headingText">
             <h1 className="font-poppins text-5xl text-center text-white ">
@@ -132,11 +141,8 @@ export default function Home() {
 
           <div>
             <Event name="JCC" details="" />
-            <Event name="KAR SEGGS" details="" />
-            <Event name="UNSC" details="" />
-            <MyComponent />
-            <MyComponent />
-            <MyComponent />
+            
+            
       
           </div>
         </div>
