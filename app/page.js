@@ -41,9 +41,10 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%]">
+
+      <div className="flex flex-col items-center justify-center mb-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
+          <h1 className="text-6xl font-proco  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>

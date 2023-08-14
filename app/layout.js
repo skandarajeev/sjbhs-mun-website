@@ -1,6 +1,13 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import localFont from 'next/font/local'
+
+// Font files can be colocated inside of `app`
+const proconia = localFont({
+  src: './font/Prociono.woff2',
+  display: 'swap',
+})
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +28,9 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
 
 
-        <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <nav class="shadow-xl border-gray-200 ">
           <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <a href="/" class="flex items-center">
               <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </a>
