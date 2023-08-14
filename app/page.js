@@ -43,52 +43,53 @@ export default function Home() {
 
 
       {/* NAVBAR */}
-     
+
 
       {/* NAVBBAR END */}
-      
+
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%] ">
+
+      <div className="flex flex-col items-center justify-center mb-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
+          <h1 className="text-6xl font-proco  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
-        <motion.div 
-          animate ={{ y:[0 , 20, 20, 0]}}
-          transition={{repeat: Infinity, duration: 4}}
+        <motion.div
+          animate={{ y: [0, 20, 20, 0] }}
+          transition={{ repeat: Infinity, duration: 4 }}
           className="flex justify-center">
           <Image
-            
+
 
             className=" w-80 md:w-6/12 h-auto md:h-200   "
             src={logo}
             alt=""
           />
         </motion.div>
-        
-       
-        <motion.div 
-        animate={{opacity: [0, 1, 1, 0]}}
-        transition={{repeat: Infinity, duration: 4}}
-        className="flex justify-center">
-        <Image
-          className=" w-80 md:w-6/12 h-auto md:h-200   "
-          src={circle}
-          alt=""
-        />
+
+
+        <motion.div
+          animate={{ opacity: [0, 1, 1, 0] }}
+          transition={{ repeat: Infinity, duration: 4 }}
+          className="flex justify-center">
+          <Image
+            className=" w-80 md:w-6/12 h-auto md:h-200   "
+            src={circle}
+            alt=""
+          />
         </motion.div>
-        
+
 
         <div className="text-center my-5">
           <p className="text-[#646464] font-poppins text-xl ">Welcome to our</p>
-          <motion.p 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{duration: 3}}
-          className="text-white font-poppins text-4xl tracking-[11px]">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+            className="text-white font-poppins text-4xl tracking-[11px]">
             11TH EDITION
           </motion.p>
         </div>
@@ -96,7 +97,7 @@ export default function Home() {
       {/* HERO SECTION END! */}
 
       {/* DATE REVEAL SECTION */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{duration: 3}} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[3rem] rounded-[3rem] my-10 ">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[3rem] rounded-[3rem] my-10 ">
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
           OCTOBER
@@ -141,8 +142,11 @@ export default function Home() {
 
           <div>
             <Event name="JCC" details="" />
-            
-            
+            <Event name="KAR SEGGS" details="" />
+            <Event name="UNSC" details="" />
+            <MyComponent />
+            <MyComponent />
+            <MyComponent />
       
           </div>
         </div>
