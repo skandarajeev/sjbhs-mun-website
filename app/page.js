@@ -53,7 +53,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center my-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-6xl font-proco  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[10vw] font-poppins  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
