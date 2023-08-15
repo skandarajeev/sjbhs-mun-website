@@ -51,7 +51,7 @@ export default function Home() {
       {/* HERO SECTION! */}
 
 
-      <div className="flex flex-col items-center justify-center mb-[40%]  md:my-[20%] lg:my-[5%]">
+      <div className="flex flex-col items-center justify-center my-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
           <h1 className="text-6xl font-proco  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
@@ -97,7 +97,7 @@ export default function Home() {
       {/* HERO SECTION END! */}
 
       {/* DATE REVEAL SECTION */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[3rem] rounded-[3rem] my-10 ">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[30px] rounded-[1rem] my-10 ">
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
           OCTOBER
@@ -110,10 +110,10 @@ export default function Home() {
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">12</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">60</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">12</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">60</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
@@ -128,25 +128,21 @@ export default function Home() {
 
       {/* Committees Reveal section */}
       <section className="my-[20%]">
-        <div className="committees committees-background">
-          <div className=""></div>
-
-          <div className=" flex flex-col gap-3 headingText">
-            <h1 className="font-poppins text-5xl text-center text-white ">
-              What are the
-            </h1>
-            <h1 className="font-poppins text-5xl text-center text-white tracking-[5px] ">
-              Committees?
-            </h1>
+        <div className="committees committees-background flex-col justify-between">
+          <div className="mb-[25vw]">
+            <div className=" flex flex-col gap-3 headingText">
+              <h1 className="font-poppins text-5xl text-center text-white ">
+                What are the
+              </h1>
+              <h1 className="font-poppins text-5xl text-center text-white tracking-[5px] ">
+                Committees?
+              </h1>
+            </div>
           </div>
 
-          <div>
+          <div className="my-[3vw]">
             <Event name="JCC" details="" />
-            <Event name="KAR SEGGS" details="" />
-            <Event name="UNSC" details="" />
-            <MyComponent />
-            <MyComponent />
-            <MyComponent />
+         
       
           </div>
         </div>
