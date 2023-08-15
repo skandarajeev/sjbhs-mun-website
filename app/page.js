@@ -3,27 +3,35 @@ import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
 import circle from "./media/Ellipse 1.svg";
-import kali from "./media/calendar-by-skanda .svg"
 import bgGradient from "./media/backgroundGradient.png";
 import MyComponent from "./about/page";
 
 import { motion } from "framer-motion";
 
 
+
+
 const Event = (details) => {
   return (
-    <div className="mt-[1rem] gradient-zero mx-auto w-[70vw] h-[140px] rounded-lg p-[10px] ">
-      <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%]">
-        <p className="text-white font-poppins text-center text-5xl align-middle ">
-          {details.name}
-        </p>
+    <div className="outerBox w-[50%] md:w-[30vw] h-[30vh] m-auto my-6 ">
+
+      <div className=" innerBox mt-[1rem] gradient-zero mx-auto w-[100%] h-[100%] rounded-lg p-[10px] ">
+        <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%] p-6">
+          <p className="text-white font-poppins text-center text-5xl align-middle ">
+            {details.name}
+          </p>
+        </div>
       </div>
     </div>
+
   );
 };
+
+
+
 export default function Home() {
   return (
-    <div>
+    <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -42,9 +50,10 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center my-[40%] md:my-[20%] lg:my-[10%]">
+
+      <div className="flex flex-col items-center justify-center my-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[2rem] m-auto text-gradient-to-r font-poppins from-yellow-500 to-white bg-clip-text mun-gradient mun-typography">
+          <h1 className="text-[10vw] font-poppins  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
@@ -88,7 +97,7 @@ export default function Home() {
       {/* HERO SECTION END! */}
 
       {/* DATE REVEAL SECTION */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[3rem] rounded-[3rem] my-10 ">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[30px] rounded-[1rem] my-10 ">
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
           OCTOBER
@@ -101,10 +110,10 @@ export default function Home() {
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">12</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">60</p>
-          <p className="font-poppins mun-gradient text-5xl font-semibold">30</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">12</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">60</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
@@ -118,30 +127,26 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      <section className="m-[10vh]">
-        <div className="committees">
-          <div className="committees-background"></div>
-
-          <div className=" flex flex-col gap-3 headingText">
-            <h1 className="font-poppins text-5xl text-center text-white ">
-              What are the
-            </h1>
-            <h1 className="font-poppins text-5xl text-center text-white tracking-[5px] ">
-              Committees?
-            </h1>
+      <section className="my-[20%]">
+        <div className="committees committees-background flex-col justify-between">
+          <div className="mb-[25vw]">
+            <div className=" flex flex-col gap-3 headingText">
+              <h1 className="font-poppins text-5xl text-center text-white ">
+                What are the
+              </h1>
+              <h1 className="font-poppins text-5xl text-center text-white tracking-[5px] ">
+                Committees?
+              </h1>
+            </div>
           </div>
 
-          <div>
+          <div className="my-[3vw]">
             <Event name="JCC" details="" />
-            <Event name="KAR SEGGS" details="" />
-            <Event name="UNSC" details="" />
-            <MyComponent />
-            <MyComponent />
-            <MyComponent />
+
 
           </div>
         </div>
       </section>
-    </div>)
-
+    </>
+  );
 }
