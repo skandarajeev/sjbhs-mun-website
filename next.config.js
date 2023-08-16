@@ -2,11 +2,11 @@
 const nextConfig = {
   output: "export",
   images: { unoptimized: true },
-  basePath: "/sjbhsmun",
+  basePath: process.env.NODE_ENV === "production" ? "/sjbhsmun" : "",
   assetPrefix:
     process.env.NODE_ENV === "production"
       ? "http://localhost:3000/sjbhsmun/"
-      : undefined,
+      : "http://localhost:3000/",
 };
 
 module.exports = nextConfig;
