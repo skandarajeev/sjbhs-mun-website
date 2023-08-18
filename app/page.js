@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
@@ -8,26 +8,19 @@ import MyComponent from "./about/page";
 
 import { motion } from "framer-motion";
 
-
-
-
 const Event = (details) => {
   return (
     <div className="outerBox w-[50%] md:w-[30vw] h-[30vh] m-auto my-6 ">
-      
       <div className=" innerBox mt-[1rem] gradient-zero mx-auto w-[100%] h-[100%] rounded-lg p-[10px] ">
-      <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%] p-6">
-        <p className="text-white font-poppins text-center text-5xl align-middle ">
-          {details.name}
-        </p>
-      </div>
+        <div className="flex justify-center flex-col  gradient-zeroOne  rounded-md  w-[100%] h-[100%] p-6">
+          <p className="text-white font-poppins text-center text-5xl align-middle ">
+            {details.name}
+          </p>
+        </div>
       </div>
     </div>
-    
   );
 };
-
-
 
 export default function Home() {
   return (
@@ -40,41 +33,35 @@ export default function Home() {
         rel="stylesheet"
       ></link>
 
-
-
       {/* NAVBAR */}
-
 
       {/* NAVBBAR END */}
 
-
       {/* HERO SECTION! */}
-
 
       <div className="flex flex-col items-center justify-center my-[40%]  md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[10vw] font-poppins  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
         <motion.div
           animate={{ y: [0, 20, 20, 0] }}
           transition={{ repeat: Infinity, duration: 4 }}
-          className="flex justify-center">
+          className="flex justify-center"
+        >
           <Image
-
-
             className=" w-80 md:w-6/12 h-auto md:h-200   "
             src={logo}
             alt=""
           />
         </motion.div>
 
-
         <motion.div
           animate={{ opacity: [0, 1, 1, 0] }}
           transition={{ repeat: Infinity, duration: 4 }}
-          className="flex justify-center">
+          className="flex justify-center"
+        >
           <Image
             className=" w-80 md:w-6/12 h-auto md:h-200   "
             src={circle}
@@ -82,14 +69,14 @@ export default function Home() {
           />
         </motion.div>
 
-
         <div className="text-center my-5">
           <p className="text-[#646464] font-poppins text-xl ">Welcome to our</p>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3 }}
-            className="text-white font-poppins text-4xl tracking-[11px]">
+            className="text-white font-poppins text-4xl tracking-[11px]"
+          >
             11TH EDITION
           </motion.p>
         </div>
@@ -97,7 +84,12 @@ export default function Home() {
       {/* HERO SECTION END! */}
 
       {/* DATE REVEAL SECTION */}
-      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3 }} className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[30px] rounded-[1rem] my-10 ">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3 }}
+        className="background-gradient  justify-between text-center flex flex-col  w-[100%] md:w-[80%] md:m-auto p-[30px] rounded-[1rem] my-10 "
+      >
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
           OCTOBER
@@ -110,10 +102,18 @@ export default function Home() {
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">12</p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">60</p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">30</p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+            30
+          </p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+            12
+          </p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+            60
+          </p>
+          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+            30
+          </p>
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
@@ -142,8 +142,6 @@ export default function Home() {
 
           <div className="my-[3vw]">
             <Event name="JCC" details="" />
-         
-      
           </div>
         </div>
       </section>
