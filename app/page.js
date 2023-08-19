@@ -22,7 +22,7 @@ const Event = (details) => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[24vw]  m-auto "
+        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[24vw]  m-auto shadow-white shadow-inner "
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
           <Eventlogo className="sm:w-[70%] w-[100%] md:mb-8  mb-5 h-auto" />
@@ -64,9 +64,7 @@ export default function Home() {
           className="flex justify-center"
         >
           <Image
-            priority={true}
-            placeholder="empty"
-            className=" w-81  h-auto   "
+            className=" w-80 md:w-6/12 h-auto md:h-200   "
             src={logo}
             alt=""
           />
