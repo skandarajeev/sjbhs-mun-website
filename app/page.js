@@ -2,7 +2,7 @@
 import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
-import circle from "./media/Ellipse 1.svg";
+import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 
 import { motion } from "framer-motion";
@@ -136,7 +136,7 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      <section className="my-[20%] mt-24">
+      <section className="my-[20%] mt-40">
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
           <h1 className="font-poppins xl:text-7xl text-5xl text-center text-white ">
             SIX EXCITING
