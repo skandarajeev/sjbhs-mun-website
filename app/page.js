@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import style from "./styles.css";
-import logo from "./media/MUN LOGO.png";
+import logo from "./media/MUN LOGO.svg";
 import circle from "./media/Ellipse 1.svg";
 import bgGradient from "./media/backgroundGradient.png";
 import MyComponent from "./about/page";
@@ -61,7 +61,9 @@ export default function Home() {
           className="flex justify-center"
         >
           <Image
-            className=" w-80 md:w-6/12 h-auto md:h-200   "
+            priority={true}
+            placeholder="empty"
+            className=" w-81  h-auto   "
             src={logo}
             alt=""
           />
