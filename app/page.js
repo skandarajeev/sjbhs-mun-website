@@ -26,7 +26,7 @@ const Event = (details) => {
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
           <Eventlogo className="sm:w-[70%] w-[100%] md:mb-8  mb-5 h-auto" />
-          <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[5vw] align-middle ">
+          <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
             {details.name}
           </p>
         </div>
