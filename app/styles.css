@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+
 .text-gradient {
     background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
             #def9fa 0.89%,
@@ -50,6 +54,26 @@
 }
 
 
+.background-gradient1 {
+    /* background-image: linear-gradient(45deg,
+            hsl(0deg 0% 0%) 0%,
+            hsl(343deg 0% 6%) 11%,
+            hsl(344deg 0% 10%) 22%,
+            hsl(344deg 0% 14%) 33%,
+            hsl(344deg 0% 18%) 44%,
+            hsl(344deg 0% 22%) 56%,
+            hsl(344deg 0% 27%) 67%,
+            hsl(344deg 0% 31%) 78%,
+            hsl(344deg 0% 36%) 89%,
+            hsl(0deg 0% 40%) 100%); */
+
+    z-index: 3;
+    max-width: 100%;
+    box-shadow: rgba(158, 133, 58, 0.1) 0px 180px 700px -20px,
+        rgba(214, 158, 158, 0.1) 0px -180px 700px -20px,
+        rgba(175, 175, 97, 0.1) 180px 0px 700px -20px,
+        rgba(236, 197, 98, 0.1) -180px 0px 700px -20px;
+}
 
 
 .committess {
@@ -97,4 +121,191 @@
 */
     background: #000000;
     /* background: radial-gradient(at center top, #2f2f2f, #1D1D1D); */
+}
+
+/* ------- */
+.parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+    font-weight: 600;
+    text-transform: ;
+    font-size: 5rem;
+    font-family: 'Abril Fatface', cursive;
+
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    color: rgb(187, 144, 18);
+}
+
+.parallax span {
+    display: block;
+    margin-right: 30px;
+}
+
+code {
+    font-family: input-mono, monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--background);
+}
+
+/* Alden message styles */
+
+.window {
+    height: 50vh;
+    border-radius: 10px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+        0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+        0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    display: flex;
+    flex-direction: column;
+}
+
+.a-tab {
+    background: #fdfdfd;
+    padding: 5px 5px 0;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid #eeeeee;
+    height: 44px;
+}
+
+.tabs {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-grow: 1;
+    user-select: none;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+
+
+
+li {
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    background: white;
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    position: relative;
+    user-select: none;
+}
+
+.underline {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--accent);
+}
+
+li.selected {
+    background: #eee;
+}
+
+li button {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    background: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    stroke: #000;
+    margin-left: 10px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+}
+
+.add-item {
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.add-item:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+}
+
+.taboo {
+    height: 1000px;
 }

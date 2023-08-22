@@ -2,10 +2,24 @@
 import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
+import alden from "./media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
-import { motion } from "framer-motion";
+import "./styles.css";
+import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame
+} from "framer-motion";
+
 
 const Event = (details) => {
   return (
@@ -22,7 +36,7 @@ const Event = (details) => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[24vw]  m-auto shadow-white shadow-inner "
+        className="background-gradient1 outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[20vw]  m-auto shadow-white shadow-inner "
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
           <Eventlogo className="sm:w-[70%] w-[100%] md:mb-8  mb-5 h-auto" />
@@ -35,6 +49,145 @@ const Event = (details) => {
   );
 };
 
+// velocity scroller
+
+export const ParallaxText = ({ baseVelocity, children })=> {
+  function wrap(min, max, value) {
+    const range = max - min;
+    return ((((value - min) % range) + range) % range) + min;
+  }
+  
+  
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
+    clamp: false,
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
+
+  const directionFactor = useRef(1);
+  useAnimationFrame((t, delta) => {
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+
+    if (velocityFactor.get() < 0) {
+      directionFactor.current = -1;
+    } else if (velocityFactor.get() > 0) {
+      directionFactor.current = 1;
+    }
+
+    moveBy += directionFactor.current * moveBy * velocityFactor.get();
+
+    baseX.set(baseX.get() + moveBy);
+  });
+
+  return (
+    <motion.div className="parallax">
+      <motion.div className="scroller" style={{ x }}>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+        <span>{children}</span>
+      </motion.div>
+
+    </motion.div>
+  );
+}
+// Velocity scroller end
+
+// ALDEN TABS
+  // -tabs
+
+  const allIngredients = [
+    { icon: "", label: "Letter", content: "The earth is flat" },
+    { icon: "🥬", label: "Advice" , content: "Welcome to SJBHS"},
+    { icon: "", label: "About", content: "I am a good boi" },
+    { icon: "🥕", label: "Carrot" },
+    { icon: "🍌", label: "Banana" },
+    { icon: "🫐", label: "Blueberries" },
+    { icon: "🥂", label: "Champers?" }
+  ];
+  const [tomato, lettuce, cheese] = allIngredients;
+  const initialTabs = [tomato, lettuce, cheese];
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getNextIngredient = void 0;
+function getNextIngredient(ingredients) {
+    var existing = new Set(ingredients);
+    return allIngredients.find(function (ingredient) { return !existing.has(ingredient); });
+}
+exports.getNextIngredient = getNextIngredient;
+
+// -array-utils
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.closestItem = void 0;
+function removeItem(_a, item) {
+    var arr = _a.slice(0);
+    var index = arr.indexOf(item);
+    index > -1 && arr.splice(index, 1);
+    return arr;
+}
+function closestItem(arr, item) {
+    var index = arr.indexOf(item);
+    if (index === -1) {
+        return arr[0];
+    }
+    else if (index === arr.length - 1) {
+        return arr[arr.length - 2];
+    }
+    else {
+        return arr[index + 1];
+    }
+}
+exports.closestItem = closestItem;
+export  function App(){
+  const [selectedTab, setSelectedTab] = useState(initialTabs[0]);
+
+  return (
+    <div className="window">
+      <div className="a-tab">
+        <ul>
+          {initialTabs.map((item) => (
+            <li
+              key={item.label}
+              className={item === selectedTab ? "selected" : ""}
+              onClick={() => setSelectedTab(item)}
+            >
+              {`${item.icon} ${item.label}`}
+              {item === selectedTab ? (
+                <motion.div className="underline" layoutId="underline" />
+              ) : null}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <main>
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={selectedTab ? selectedTab.label : "empty"}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            {selectedTab ? selectedTab.content : "😋"}
+          </motion.div>
+        </AnimatePresence>
+      </main>
+    </div>
+  );
+
+
+
+}
+
+  
 export default function Home() {
   return (
     <>
@@ -138,24 +291,34 @@ export default function Home() {
       {/* Committees Reveal section */}
       <section className="my-[20%] mt-40">
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
-          <h1 className="font-poppins xl:text-7xl text-5xl text-center text-white ">
-            SIX EXCITING
-          </h1>
-          <h1 className="font-poppins xl:text-7xl text-5xl text-center text-white tracking-[5px] ">
-            COMMITTEES
-          </h1>
+        <ParallaxText baseVelocity={-2} className="font-scroller  xl:text-7xl text-1xl text-center text-white ">
+            Six Committees to 
+          </ParallaxText>
+          <ParallaxText baseVelocity={+4} className="font-poppins xl:text-7xl text-5xl text-center text-white ">
+          Leave you invigorated
+          </ParallaxText>
+
+          
+
+
         </div>
-        <div className=" flex-col justify-content">
-          <div className="flex flex-wrap mx-5 mt-20 justify-around">
+        <div className=" flex-col justify-content md:p-[10rem]">
+          <div className="flex flex-wrap mx-5 mt-10 justify-around">
             <Event name="JCC" details="" />
             <Event name="LOK SABHA" details="" />
             <Event name="GAY" details="" />
             <Event name="UNSC" details="" />
             <Event name="GA1" details="" />
             <Event name="TCC" details="" />
+   
           </div>
         </div>
       </section>
+      <div className="SecGen flex-col w-[100%]  md:flex-row p-[2rem]">
+        <Image src={logo} />
+        <App className="taboo" />
+      </div>
+      
     </>
   );
 }
