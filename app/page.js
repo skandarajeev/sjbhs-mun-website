@@ -8,7 +8,6 @@ import Eventlogo from "./media/event-logo.svg";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
-import "./styles.css";
 import { useRef } from "react";
 import {
   motion,
@@ -284,7 +283,7 @@ export default function Home() {
       {/* Committees Reveal section */}
       <section className="my-[20%] mt-40">
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
-          <ParallaxText
+          {/* <ParallaxText
             baseVelocity={-2}
             className="font-scroller  xl:text-7xl text-1xl text-center text-white "
           >
@@ -295,7 +294,7 @@ export default function Home() {
             className="font-poppins xl:text-7xl text-5xl text-center text-white "
           >
             Leave you invigorated
-          </ParallaxText>
+          </ParallaxText> */}
         </div>
         <div className=" flex-col justify-content md:p-[10rem]">
           <div className="flex flex-wrap mx-5 mt-10 justify-around">
@@ -309,7 +308,7 @@ export default function Home() {
         </div>
       </section>
       <div className="SecGen flex-col w-[100%]  md:flex-row p-[2rem]">
-        <Image src={alden} />
+        <Image src={logo} />
         <App className="taboo" />
       </div>
     </>
