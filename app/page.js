@@ -17,9 +17,8 @@ import {
   useTransform,
   useMotionValue,
   useVelocity,
-  useAnimationFrame
+  useAnimationFrame,
 } from "framer-motion";
-
 
 const Event = (details) => {
   return (
@@ -51,13 +50,12 @@ const Event = (details) => {
 
 // velocity scroller
 
-export const ParallaxText = ({ baseVelocity, children })=> {
+export const ParallaxText = ({ baseVelocity, children }) => {
   function wrap(min, max, value) {
     const range = max - min;
     return ((((value - min) % range) + range) % range) + min;
   }
-  
-  
+
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -94,33 +92,34 @@ export const ParallaxText = ({ baseVelocity, children })=> {
         <span>{children}</span>
         <span>{children}</span>
       </motion.div>
-
     </motion.div>
   );
-}
+};
 // Velocity scroller end
 
 // ALDEN TABS
-  // -tabs
+// -tabs
 
-  const allIngredients = [
-    { icon: "", label: "Letter", content: "The earth is flat" },
-    { icon: "🥬", label: "Advice" , content: "Welcome to SJBHS"},
-    { icon: "", label: "About", content: "I am a good boi" },
-    { icon: "🥕", label: "Carrot" },
-    { icon: "🍌", label: "Banana" },
-    { icon: "🫐", label: "Blueberries" },
-    { icon: "🥂", label: "Champers?" }
-  ];
-  const [tomato, lettuce, cheese] = allIngredients;
-  const initialTabs = [tomato, lettuce, cheese];
+const allIngredients = [
+  { icon: "", label: "Letter", content: "The earth is flat" },
+  { icon: "🥬", label: "Advice", content: "Welcome to SJBHS" },
+  { icon: "", label: "About", content: "I am a good boi" },
+  { icon: "🥕", label: "Carrot" },
+  { icon: "🍌", label: "Banana" },
+  { icon: "🫐", label: "Blueberries" },
+  { icon: "🥂", label: "Champers?" },
+];
+const [tomato, lettuce, cheese] = allIngredients;
+const initialTabs = [tomato, lettuce, cheese];
 
-"use strict";
+("use strict");
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getNextIngredient = void 0;
 function getNextIngredient(ingredients) {
-    var existing = new Set(ingredients);
-    return allIngredients.find(function (ingredient) { return !existing.has(ingredient); });
+  var existing = new Set(ingredients);
+  return allIngredients.find(function (ingredient) {
+    return !existing.has(ingredient);
+  });
 }
 exports.getNextIngredient = getNextIngredient;
 
@@ -128,25 +127,23 @@ exports.getNextIngredient = getNextIngredient;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.closestItem = void 0;
 function removeItem(_a, item) {
-    var arr = _a.slice(0);
-    var index = arr.indexOf(item);
-    index > -1 && arr.splice(index, 1);
-    return arr;
+  var arr = _a.slice(0);
+  var index = arr.indexOf(item);
+  index > -1 && arr.splice(index, 1);
+  return arr;
 }
 function closestItem(arr, item) {
-    var index = arr.indexOf(item);
-    if (index === -1) {
-        return arr[0];
-    }
-    else if (index === arr.length - 1) {
-        return arr[arr.length - 2];
-    }
-    else {
-        return arr[index + 1];
-    }
+  var index = arr.indexOf(item);
+  if (index === -1) {
+    return arr[0];
+  } else if (index === arr.length - 1) {
+    return arr[arr.length - 2];
+  } else {
+    return arr[index + 1];
+  }
 }
 exports.closestItem = closestItem;
-export  function App(){
+export function App() {
   const [selectedTab, setSelectedTab] = useState(initialTabs[0]);
 
   return (
@@ -168,7 +165,7 @@ export  function App(){
         </ul>
       </div>
       <main>
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.label : "empty"}
             initial={{ y: 10, opacity: 0 }}
@@ -182,12 +179,8 @@ export  function App(){
       </main>
     </div>
   );
-
-
-
 }
 
-  
 export default function Home() {
   return (
     <>
@@ -291,16 +284,18 @@ export default function Home() {
       {/* Committees Reveal section */}
       <section className="my-[20%] mt-40">
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
-        <ParallaxText baseVelocity={-2} className="font-scroller  xl:text-7xl text-1xl text-center text-white ">
-            Six Committees to 
+          <ParallaxText
+            baseVelocity={-2}
+            className="font-scroller  xl:text-7xl text-1xl text-center text-white "
+          >
+            Six Committees to
           </ParallaxText>
-          <ParallaxText baseVelocity={+4} className="font-poppins xl:text-7xl text-5xl text-center text-white ">
-          Leave you invigorated
+          <ParallaxText
+            baseVelocity={+4}
+            className="font-poppins xl:text-7xl text-5xl text-center text-white "
+          >
+            Leave you invigorated
           </ParallaxText>
-
-          
-
-
         </div>
         <div className=" flex-col justify-content md:p-[10rem]">
           <div className="flex flex-wrap mx-5 mt-10 justify-around">
@@ -310,15 +305,13 @@ export default function Home() {
             <Event name="UNSC" details="" />
             <Event name="GA1" details="" />
             <Event name="TCC" details="" />
-   
           </div>
         </div>
       </section>
       <div className="SecGen flex-col w-[100%]  md:flex-row p-[2rem]">
-        <Image src={logo} />
+        <Image src={alden} />
         <App className="taboo" />
       </div>
-      
     </>
   );
 }
