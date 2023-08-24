@@ -18,9 +18,8 @@ import {
   useTransform,
   useMotionValue,
   useVelocity,
-  useAnimationFrame
+  useAnimationFrame,
 } from "framer-motion";
-
 
 const Event = (details) => {
   return (
@@ -52,13 +51,12 @@ const Event = (details) => {
 
 // velocity scroller
 
-export const ParallaxText = ({ baseVelocity, children })=> {
+export const ParallaxText = ({ baseVelocity, children }) => {
   function wrap(min, max, value) {
     const range = max - min;
     return ((((value - min) % range) + range) % range) + min;
   }
-  
-  
+
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
@@ -95,15 +93,12 @@ export const ParallaxText = ({ baseVelocity, children })=> {
         <span>{children}</span>
         <span>{children}</span>
       </motion.div>
-
     </motion.div>
   );
-}
+};
 // Velocity scroller end
 
 
-
-  
 export default function Home() {
   return (
     <>
@@ -207,16 +202,18 @@ export default function Home() {
       {/* Committees Reveal section */}
       <section className="my-[20%] mt-40">
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
-        <ParallaxText baseVelocity={-2} className="font-scroller  xl:text-7xl text-1xl text-center text-white ">
-            Six Committees to 
+          {/* <ParallaxText
+            baseVelocity={-2}
+            className="font-scroller  xl:text-7xl text-1xl text-center text-white "
+          >
+            Six Committees to
           </ParallaxText>
-          <ParallaxText baseVelocity={+4} className="font-poppins xl:text-7xl text-5xl text-center text-white ">
-          Leave you invigorated
-          </ParallaxText>
-
-          
-
-
+          <ParallaxText
+            baseVelocity={+4}
+            className="font-poppins xl:text-7xl text-5xl text-center text-white "
+          >
+            Leave you invigorated
+          </ParallaxText> */}
         </div>
         <div className=" flex-col justify-content md:p-[10rem]">
           <div className="flex flex-wrap mx-5 mt-10 justify-around">
@@ -226,7 +223,6 @@ export default function Home() {
             <Event name="UNSC" details="" />
             <Event name="GA1" details="" />
             <Event name="TCC" details="" />
-   
           </div>
         </div>
       </section>
@@ -234,7 +230,6 @@ export default function Home() {
         <Image src={logo} />
         <Tab className="taboo" />
       </div>
-      
     </>
   );
 }
