@@ -135,3 +135,20 @@ code {
 }
 
 /* Alden message styles */
+
+.SecGen {
+    height: 100px;
+}
+
+
+/* FOOTER */
+.footer {
+    position: relative;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}

@@ -110,6 +110,15 @@ export default function RootLayout({ children }) {
         </nav>
 
         {children}
+
+        
+      <footer className="footer h-[200px]">
+        <div>
+          <p>boom</p>
+        </div>
+
+      </footer>
+      
       </body>
     </html>
   );

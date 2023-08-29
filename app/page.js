@@ -2,12 +2,12 @@
 import Image from "next/image";
 import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
-import alden from "./media/alden.jpg";
+import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Tab from "./components/tabs.js"
+import Tab from "./components/alden/tabs.js"
 
 
 import { useRef } from "react";
@@ -200,7 +200,7 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      <section className="my-[20%] mt-40">
+      
         <div className=" flex flex-col gap-3 headingText  mx-2 ">
           {/* <ParallaxText
             baseVelocity={-2}
@@ -216,7 +216,7 @@ export default function Home() {
           </ParallaxText> */}
         </div>
         <div className=" flex-col justify-content md:p-[10rem]">
-          <div className="flex flex-wrap mx-5 mt-10 justify-around">
+          <div className="flex flex-wrap justify-around">
             <Event name="JCC" details="" />
             <Event name="LOK SABHA" details="" />
             <Event name="GA1" details="" />
@@ -225,11 +225,15 @@ export default function Home() {
             <Event name="TCC" details="" />
           </div>
         </div>
-      </section>
-      <div className="SecGen flex-col w-[100%]  md:flex-row p-[2rem]">
-        <Image src={logo} />
-        <Tab className="taboo" />
-      </div>
+        {/* <div className="SecGen grid grid-rows-2 md:grid-cols-2 w-[100%] h-[500px] md:p-[3rem]">
+        
+        <Tab className="taboo p-[5rem]" />
+      </div> */}
+      <div className=" grid md:grid-cols-2">
+        <Image src={alden}  className="w-[100vw] p-[4rem]"/>
+        <Tab className="h-[100%] " />
+      </div>  
+        
     </>
   );
 }

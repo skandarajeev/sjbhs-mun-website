@@ -1,11 +1,15 @@
 
 import { useState } from "react"
-import style from "./tab.css"
+import style from "./styles.module.css"
+import alden from "../../media/alden.jpg"
 import { motion, AnimatePresence } from "framer-motion"
 const allIngredients = [
-    { icon: "🍅", label: "Tomato" },
-    { icon: "🥬", label: "Lettuce" },
-    { icon: "🧀", label: "Cheese" },
+    { icon: "", label: "Letter", content:"The" },
+    { icon: "", label: "Advice", content:"Boom!" },
+    { 
+      icon: "",
+     label: "About", 
+     content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lectus eu libero maximus aliquam. Fusce suscipit semper nulla, quis finibus mi vestibulum non. Praesent nec bibendum odio. Sed interdum diam nec quam fringilla, ac tristique arcu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In tincidunt malesuada libero vel interdum. Vestibulum volutpat viverra lacus a tincidunt. Quisque suscipit lorem vel leo aliquam, id faucibus tellus lobortis. Vivamus et dolor sed justo pharetra convallis a ut ligula. Suspendisse fringilla ullamcorper mauris, id scelerisque velit. Proin eget velit vel arcu elementum convallis non vel erat. Aenean in purus et tellus ultricies pulvinar. Sed dapibus nunc nec dictum fermentum." },
     { icon: "🥕", label: "Carrot" },
     { icon: "🍌", label: "Banana" },
     { icon: "🫐", label: "Blueberries" },
@@ -26,13 +30,13 @@ export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
-    <div className="window">
-      <nav>
-        <ul>
+    <div className={style.window}>
+      <nav className={style.nav}>
+        <ul className={style.ul}> 
           {tabs.map(item => (
             <li
               key={item.label}
-              className={item === selectedTab ? "selected" : ""}
+              className={style.ul} 
               onClick={() => setSelectedTab(item)}
             >
               {`${item.icon} ${item.label}`}
@@ -43,7 +47,7 @@ export default function Tab() {
           ))}
         </ul>
       </nav>
-      <main>
+      <main className={style.main}>
         <AnimatePresence >
           <motion.div
             key={selectedTab ? selectedTab.label : "empty"}
@@ -52,7 +56,7 @@ export default function Tab() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {selectedTab ? selectedTab.icon : "😋"}
+            {selectedTab ? selectedTab.content : "😋"}
           </motion.div>
         </AnimatePresence>
       </main>

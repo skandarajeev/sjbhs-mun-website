@@ -1,5 +1,8 @@
 .window {
-    height: 50vh;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 2rem;
+
     border-radius: 10px;
     background: white;
     overflow: hidden;
@@ -10,7 +13,7 @@
     flex-direction: column;
 }
 
-.a-tab {
+.nav {
     background: #fdfdfd;
     padding: 5px 5px 0;
     border-radius: 10px;
@@ -29,22 +32,18 @@
     width: 100%;
 }
 
-main {
+.main {
     display: flex;
-    justify-content: center;
+
+    line-height: 1.7;
     align-items: center;
-    font-size: 3rem;
+    font-size: auto;
     flex-grow: 1;
     user-select: none;
 }
 
-ul {
-    display: flex;
-    width: 100%;
-}
-
-ul,
-li {
+.ul,
+.li {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -53,11 +52,12 @@ li {
     font-size: 14px;
 }
 
+.ul {
+    display: flex;
+    width: 100%;
+}
 
-
-
-
-li {
+.li {
     border-radius: 5px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -85,11 +85,11 @@ li {
     background: var(--accent);
 }
 
-li.selected {
+.li {
     background: #eee;
 }
 
-li button {
+.button {
     width: 20px;
     height: 20px;
     border: 0;
@@ -127,8 +127,4 @@ li button {
     opacity: 0.4;
     cursor: default;
     pointer-events: none;
-}
-
-.taboo {
-    height: 1000px;
 }
