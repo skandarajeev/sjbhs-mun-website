@@ -7,8 +7,7 @@ import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Tab from "./components/alden/tabs.js"
-
+import Tab from "./components/alden/tabs.js";
 
 import { useRef } from "react";
 import {
@@ -36,10 +35,10 @@ const Event = (details) => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
-        className="background-gradient1 outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[20vw]  m-auto shadow-white shadow-inner "
+        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[24vw]  m-auto shadow-white shadow-inner "
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-          <Eventlogo className="sm:w-[70%] w-[100%] shadow-white shadow-inner md:mb-8  mb-5 h-auto" />
+          <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
           <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
             {details.name}
           </p>
@@ -98,7 +97,6 @@ export const ParallaxText = ({ baseVelocity, children }) => {
 };
 // Velocity scroller end
 
-
 export default function Home() {
   return (
     <>
@@ -152,6 +150,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3 }}
+            viewport={{ once: true }}
             className="text-white font-poppins text-4xl tracking-[11px]"
           >
             11TH EDITION
@@ -165,6 +164,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3 }}
+        viewport={{ once: true }}
         className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[80%]   m-auto p-[30px] rounded-[1rem] my-10 "
       >
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
@@ -200,9 +200,9 @@ export default function Home() {
       {/* DATE REVEAL END */}
 
       {/* Committees Reveal section */}
-      
-        <div className=" flex flex-col gap-3 headingText  mx-2 ">
-          {/* <ParallaxText
+
+      <div className=" flex flex-col gap-3 headingText  mx-2 ">
+        {/* <ParallaxText
             baseVelocity={-2}
             className="font-scroller  xl:text-7xl text-1xl text-center text-white "
           >
@@ -214,26 +214,25 @@ export default function Home() {
           >
             Leave you invigorated
           </ParallaxText> */}
+      </div>
+      <div className=" flex-col justify-content md:p-[10rem]">
+        <div className="flex flex-wrap justify-around">
+          <Event name="JCC" details="" />
+          <Event name="LOK SABHA" details="" />
+          <Event name="GA1" details="" />
+          <Event name="UNSC" details="" />
+          <Event name="GA1" details="" />
+          <Event name="TCC" details="" />
         </div>
-        <div className=" flex-col justify-content md:p-[10rem]">
-          <div className="flex flex-wrap justify-around">
-            <Event name="JCC" details="" />
-            <Event name="LOK SABHA" details="" />
-            <Event name="GA1" details="" />
-            <Event name="UNSC" details="" />
-            <Event name="GA1" details="" />
-            <Event name="TCC" details="" />
-          </div>
-        </div>
-        {/* <div className="SecGen grid grid-rows-2 md:grid-cols-2 w-[100%] h-[500px] md:p-[3rem]">
+      </div>
+      {/* <div className="SecGen grid grid-rows-2 md:grid-cols-2 w-[100%] h-[500px] md:p-[3rem]">
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
       <div className=" grid md:grid-cols-2">
-        <Image src={alden}  className="w-[100vw] p-[4rem]"/>
+        <Image src={alden} className="w-[100vw] p-[4rem]" />
         <Tab className="h-[100%] " />
-      </div>  
-        
+      </div>
     </>
   );
 }
