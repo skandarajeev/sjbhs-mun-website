@@ -1,0 +1,12 @@
+{
+  "name": "sjbhs-api",
+  "version": "1.0.0",
+  "description": "It is the backend for the website of sjbhs mun ",
+  "main": "index.js",
+  "author": "Skanda Rajeev",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
