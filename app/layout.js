@@ -20,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" class="dark">
+      <body className="dark">
         <nav className="shadow-xl border-gray-200 ">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <Link href="/" className="flex items-center">
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
                 <li>
                   <Link
                     href="#"
-                    className="bl m ock py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-orange-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                    className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-orange-700 md:p-0 dark:text-white md:dark:text-blue-500"
                     aria-current="page"
                   >
                     Home

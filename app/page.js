@@ -126,7 +126,7 @@ export default function Home() {
           className="flex justify-center"
         >
           <Image
-            className=" w-80 md:w-6/12 h-auto md:h-200   "
+            className=" w-80 md:w-[40vw] h-auto md:h-200   "
             src={logo}
             alt=""
           />
