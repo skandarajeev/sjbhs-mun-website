@@ -538,7 +538,7 @@ export const DelegationRegistration = () => {
       className="flex flex-col justify-center items-center mt-10 "
       onSubmit={handleSubmit}
     >
-      <h1 className="text-6xl text-white text-center">
+      <h1 className="md:text-6xl text-4xl text-white text-center">
         DELEGATION REGISTRATION
       </h1>
       <div className="flex flex-wrap justify-center items-center mt-11">
