@@ -56,7 +56,7 @@ export default function Tab() {
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
 
-            className = {`${scroll}  text-[0.9rem] md:text-[1rem] leading-[1.8rem] md:leading-[1.8rem] `}
+            className = {`  text-[0.9rem] md:text-[1rem] leading-[1.8rem] md:leading-[1.8rem] `}
           >
             {selectedTab ? selectedTab.content : "😋"}
            
