@@ -6,7 +6,7 @@ import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, spring } from "framer-motion";
 import Tab from "./components/alden/tabs.js";
 
 import { useRef } from "react";
@@ -25,17 +25,17 @@ const Event = (details) => {
     <motion.div
       whileInView="visible"
       initial="hidden"
-      transition={{ duration: 0.5, delay: 0.2 }}
+      transition={{ duration: 0.8, type: "spring", bounce: "0.4" }}
       viewport={{ once: true }}
       variants={{
-        hidden: { opacity: 0, y: 100 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 200, scale: 0.8 },
+        visible: { opacity: 1, y: 50, scale: 1 },
       }}
     >
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[24vw]  m-auto shadow-white shadow-inner "
+        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-white shadow-inner "
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
           <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
@@ -114,7 +114,7 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center  my-[22%] md:my-[20%] lg:my-[5%]">
+      <div className="flex flex-col items-center justify-center overflow-x-hidden my-[22%] md:my-[20%] lg:my-[5%]">
         <div className="">
           <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
@@ -215,7 +215,7 @@ export default function Home() {
             Leave you invigorated
           </ParallaxText> */}
       </div>
-      <div className=" flex-col justify-content md:p-[10rem]">
+      <div className=" flex-col justify-content lg:p-[8rem]">
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
