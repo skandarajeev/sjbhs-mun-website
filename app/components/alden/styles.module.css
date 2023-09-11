@@ -1,8 +1,20 @@
-.window {
-    width: 100%;
-    padding: 1rem;
-    margin: 2rem 2rem;
+.body {
+    --accent: #8855ff;
+    width: 100vw;
+    height: 100vh;
+    background: var(--accent);
+    overflow: hidden;
 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+
+    height: auto;
+    margin: auto;
     border-radius: 10px;
     background: white;
     overflow: hidden;
@@ -15,12 +27,13 @@
 
 .nav {
     background: #fdfdfd;
-    padding: 5px 5px 0;
+
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: 1px solid #eeeeee;
     height: 44px;
+    padding: 20px;
 }
 
 .tabs {
@@ -34,13 +47,19 @@
 
 .main {
     display: flex;
-
-    line-height: 1.7;
+    justify-content: center;
     align-items: center;
-    font-size: auto;
+    padding: 2rem;
     flex-grow: 1;
     user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 400;
+
 }
+
+.scroll {}
 
 .ul,
 .li {
@@ -85,11 +104,11 @@
     background: var(--accent);
 }
 
-.li {
+li.selected {
     background: #eee;
 }
 
-.button {
+.li button {
     width: 20px;
     height: 20px;
     border: 0;
