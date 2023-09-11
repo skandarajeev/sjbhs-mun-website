@@ -114,9 +114,9 @@ export default function Home() {
 
       {/* HERO SECTION! */}
 
-      <div className="flex flex-col items-center justify-center  my-[40%]  md:my-[20%] lg:my-[5%]">
+      <div className="flex flex-col items-center justify-center  my-[22%] md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[10vw] lg:text-[6vw] md:text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
@@ -126,7 +126,7 @@ export default function Home() {
           className="flex justify-center"
         >
           <Image
-            className=" w-80 md:w-[40vw] h-auto md:h-200   "
+            className=" w-80 md:w-[29vw] h-auto md:h-200   "
             src={logo}
             alt=""
           />
@@ -151,7 +151,7 @@ export default function Home() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 3 }}
             viewport={{ once: true }}
-            className="text-white font-poppins text-4xl tracking-[11px]"
+            className="text-white font-poppins md:text-4xl text-2xl tracking-[11px]"
           >
             11TH EDITION
           </motion.p>

@@ -6,11 +6,11 @@ module.exports = {
     "./public/**/*.html",
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
+    "./public/**/*.html",
   ],
   darkMode: 'class',
-  
-  
+
+
   theme: {
     extend: {
       backgroundImage: {
