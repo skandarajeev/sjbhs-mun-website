@@ -229,9 +229,11 @@ export default function Home() {
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
-      <div className=" grid md:grid-cols-2">
-        <Image src={alden} className="w-[100vw] p-[4rem]" />
-        <Tab className="h-[100%] " />
+      <p>Word from the Secretary General</p>
+      <div className=" grid md:grid-cols-2 p-[2.5rem]">
+        
+        <Image src={alden} className="w-[100vw] p-[2rem]" />
+        <Tab className="h-[100%]" />
       </div>
     </>
   );

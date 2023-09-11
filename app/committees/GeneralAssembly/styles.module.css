@@ -1,0 +1,32 @@
+.big {
+    background-image: url("../../media/gA.svg");
+    background-size: cover;
+    background-clip: inherit;
+}
+
+.back {
+    background-image: url("../../media/gaB.jpg");
+    background-size: cover;
+}
+
+.boi {
+    font-size: 100px;
+}
+
+.button {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-size: 1vw;
+    fill: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins';
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    color: #ffffff;
+    background-color: rgba(255, 44, 85, 0);
+    border-color: #fff12c;
+    border-radius: 50px 50px 50px 50px;
+}

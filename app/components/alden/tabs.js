@@ -30,7 +30,7 @@ export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
-    <div className={style.window}>
+    <div className={`${style.window} w-[100%] md:w-[100%]`}>
       <nav className={style.nav}>
         <ul className={style.ul}> 
           {tabs.map(item => (
@@ -48,15 +48,18 @@ export default function Tab() {
         </ul>
       </nav>
       <main className={style.main}>
-        <AnimatePresence >
+        <AnimatePresence mode="wait">
           <motion.div
             key={selectedTab ? selectedTab.label : "empty"}
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
             transition={{ duration: 0.2 }}
+
+            className = {`${scroll}  text-[0.9rem] md:text-[1rem] leading-[1.8rem] md:leading-[1.8rem] `}
           >
             {selectedTab ? selectedTab.content : "😋"}
+           
           </motion.div>
         </AnimatePresence>
       </main>
