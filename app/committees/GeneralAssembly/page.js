@@ -6,20 +6,21 @@ import Image from "next/image";
 
 export default function GA() {
   return (
-    <div className={`  grid grid-rows-2 md:grid-cols-2 p-[1rem]`}>
+    <div className="main-div">
+        <div className={`  grid grid-rows-1 md:grid-cols-2 p-[1rem]`}>
       {/* LEFT */}
       <div>
-        <div className="mb-[5rem] mt-[5rem]">
-          <p className="text-white font-poppins font-bold text-[5rem] md:text-[3rem]">
+        <div className="  mt-[5rem] text-[15vw] md:text-[8vw] place-items-center ">
+          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left`}>
             GENERAL
           </p>
-          <p className="text-white font-poppins font-bold text-[5rem] md:text-[3rem]">
-            ASSEMBLY.
+          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left`}>
+            ASSEMBLY
           </p>
         </div>
-        <div>
+        <div className="">
           <p
-            className={` text-white text-[1rem] leading-[2rem] tracking-[1.8px] mb-[3rem] p-[1rem]`}
+            className={` text-white text-center md:text-left text-[1rem] leading-[2rem] tracking-[1.8px] mb-[3rem] p-[0.6rem] `}
           >
             The General Assembly Plenary is one of the most crucial bodies
             within a Model United Nations conference, reflecting the global
@@ -34,208 +35,156 @@ export default function GA() {
           </p>
         </div>
         <div>
-          <div className="grid grid-cols-4 gap-3 hidden md:block ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 88 88"
-              fill="none"
-            >
-              <circle cx="44.1565" cy="43.971" r="43.2991" fill="#242323" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 88 88"
-              fill="none"
-            >
-              <circle cx="44.1565" cy="43.971" r="43.2991" fill="#242323" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 88 88"
-              fill="none"
-            >
-              <circle cx="44.1565" cy="43.971" r="43.2991" fill="#242323" />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="44"
-              height="44"
-              viewBox="0 0 88 88"
-              fill="none"
-            >
-              <circle cx="44.1565" cy="43.971" r="43.2991" fill="#242323" />
-            </svg>
-          </div>
+         
         </div>
       </div>
 
       {/* right */}
       <div className="grid grid-cols-1 gap-3  ">
         <div
-          className={`${styles.big} h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
+          className={`${styles.big} flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
         >
-          <p>NERD OUT BOIS</p>
+          <p className="text-white text-center">
+            Discussing  the  labour  conditions  with  specific  regards  to  economic  imperialism  in 
+            underdeveloped  and  developing  countries
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <div className="bg-black h-[50vh] w-[100%] rounded-xl">
-            <div
-              id="default-carousel"
-              class="relative w-full"
-              data-carousel="slide"
-            >
-              <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <Image
-                    src={img}
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <Image
-                    src={img}
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <Image
-                    src={img}
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <Image
-                    src={img}
-                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-
-                <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                  <Image
-                    src={img}
-                    class="absolute block w-full -translate-x-1/2 -tran--slate-y-1/2 top-1/2 left-1/2"
-                    alt="..."
-                  />
-                </div>
-              </div>
-
-              <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                  data-carousel-slide-to="0"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 2"
-                  data-carousel-slide-to="1"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 3"
-                  data-carousel-slide-to="2"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 4"
-                  data-carousel-slide-to="3"
-                ></button>
-                <button
-                  type="button"
-                  class="w-3 h-3 rounded-full"
-                  aria-current="false"
-                  aria-label="Slide 5"
-                  data-carousel-slide-to="4"
-                ></button>
-              </div>
-              <button
-                type="button"
-                class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-prev
-              >
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 1 1 5l4 4"
-                    />
-                  </svg>
-                  <span class="sr-only">Previous</span>
-                </span>
-              </button>
-              <button
-                type="button"
-                class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                data-carousel-next
-              >
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg
-                    class="w-4 h-4 text-white dark:text-gray-800"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 6 10"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="m1 9 4-4-4-4"
-                    />
-                  </svg>
-                  <span class="sr-only">Next</span>
-                </span>
-              </button>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 gap-3">
+          
 
           {/* ----- */}
-          <div className="bg-black h-[50vh] w-[100%] rounded-xl p-[1rem] flex justify-around flex-col">
-            <button
-              type="button"
-              className={`${styles.button} w-[100%] text-[100vw] `}
-            >
-              Background Guide
-            </button>
-            <button
-              type="button"
-              className={`${styles.button} w-[100%] text-[100vw] `}
-            >
-              Country Matrix
-            </button>
+          <div className="mt-[5rem] mb-[5rem] w-[100%] rounded-xl p-[1rem] flex flex-col">
+            
+            <button type="button" class="mb-[1rem] text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 ">Country Matrix</button>
+            <button type="button" class="text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Background guide</button>
+
           </div>
         </div>
       </div>
+      </div>
+ 
+
+  {/* EB INFO */}
+  <div className="grid grid-cols-1 md:grid-cols-4 place-items-center mt-7 gap-5">
+       {/* 1 */}
+        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex justify-end px-4 pt-4">
+                
+                
+                <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center pb-10">
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+               
+            </div>
+        </div>
+        {/* /1 */}
+
+        {/* 2 */}
+        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex justify-end px-4 pt-4">
+                
+                
+                <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center pb-10">
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+               
+            </div>
+        </div>
+        {/* /2 */}
+
+         {/* 3 */}
+         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex justify-end px-4 pt-4">
+                
+                
+                <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center pb-10">
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+               
+            </div>
+        </div>
+        {/* /3 */}
+
+         {/* 4 */}
+         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="flex justify-end px-4 pt-4">
+                
+                
+                <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                    <ul class="py-2" aria-labelledby="dropdownButton">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Edit</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Export Data</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col items-center pb-10">
+                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+               
+            </div>
+        </div>
+        {/* /4 */}
+
+      </div>
     </div>
+          
+
+     
+      
+
+    
   );
 }

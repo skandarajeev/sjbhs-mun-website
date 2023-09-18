@@ -1,0 +1,14 @@
+.background {
+    background-color: #0d0d0d;
+    z-index: 3;
+    max-width: 100%;
+    box-shadow: rgba(195, 182, 4, 0.1) 0px 90px 70px -10px,
+        rgba(219, 170, 8, 0.1) 0px -0px 70px -10px,
+        rgba(168, 130, 3, 0.1) 90px 0px 70px -10px,
+        rgba(218, 173, 7, 0.1) -90px 0px 70px -10px;
+
+}
+
+.backie {
+    background-color: #d0a031;
+}
