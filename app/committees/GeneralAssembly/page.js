@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import "flowbite";
 import img from "../../media/alden.jpg";
 import Image from "next/image";
+import questiomark from "../../media/questionMark.jpg"
 
 export default function GA() {
   return (
@@ -10,13 +11,16 @@ export default function GA() {
         <div className={`  grid grid-rows-1 md:grid-cols-2 p-[1rem]`}>
       {/* LEFT */}
       <div>
-        <div className="  mt-[5rem] text-[15vw] md:text-[8vw] place-items-center ">
-          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left`}>
-            GENERAL
+        <div className="  mt-[5rem] text-[10vw] md:text-[8vw] place-items-center w-[100%]">
+          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left text-[6vw]`}>
+            INTERNATIONAL LABOUR
           </p>
-          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left`}>
-            ASSEMBLY
+          <p className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left text-[5vw] mt-[1rem] mb-[2rem]`}>
+            ORGANISATION
           </p>
+        </div>
+        <div className="agenda">
+          <p></p>
         </div>
         <div className="">
           <p
@@ -44,10 +48,7 @@ export default function GA() {
         <div
           className={`${styles.big} flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
         >
-          <p className="text-white text-center">
-            Discussing  the  labour  conditions  with  specific  regards  to  economic  imperialism  in 
-            underdeveloped  and  developing  countries
-          </p>
+          
         </div>
         <div className="grid grid-cols-1 gap-3">
           
@@ -67,7 +68,7 @@ export default function GA() {
   {/* EB INFO */}
   <div className="grid grid-cols-1 md:grid-cols-4 place-items-center mt-7 gap-5">
        {/* 1 */}
-        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-indigo-800 dark:border-gray-700">
             <div class="flex justify-end px-4 pt-4">
                 
                 
@@ -86,16 +87,16 @@ export default function GA() {
                 </div>
             </div>
             <div class="flex flex-col items-center pb-10">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                <Image src={questiomark} height={100}></Image>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">?</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">?</span>
                
             </div>
         </div>
         {/* /1 */}
 
         {/* 2 */}
-        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-indigo-800 dark:border-gray-700">
             <div class="flex justify-end px-4 pt-4">
                 
                 
@@ -114,16 +115,16 @@ export default function GA() {
                 </div>
             </div>
             <div class="flex flex-col items-center pb-10">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                <Image src={questiomark} height={100}></Image>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">?</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">?</span>
                
             </div>
         </div>
         {/* /2 */}
 
          {/* 3 */}
-         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-indigo-800 dark:border-gray-700">
             <div class="flex justify-end px-4 pt-4">
                 
                 
@@ -142,16 +143,16 @@ export default function GA() {
                 </div>
             </div>
             <div class="flex flex-col items-center pb-10">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+              <Image src={questiomark} height={100}></Image>              
+              <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">?</h5>
+              <span class="text-sm text-gray-500 dark:text-gray-400">?</span>
                
             </div>
         </div>
         {/* /3 */}
 
          {/* 4 */}
-         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-indigo-800 dark:border-gray-700">
             <div class="flex justify-end px-4 pt-4">
                 
                 
@@ -170,9 +171,9 @@ export default function GA() {
                 </div>
             </div>
             <div class="flex flex-col items-center pb-10">
-                <img class="w-24 h-24 mb-3 rounded-full shadow-lg" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie image"/>
-                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Bonnie Green</h5>
-                <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+                <Image src={questiomark} height={100}></Image>
+                <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">?</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">?</span>
                
             </div>
         </div>
