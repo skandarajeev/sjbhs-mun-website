@@ -35,7 +35,7 @@ const Event = (details) => {
       <motion.div
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-white shadow-inner "
+        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
       >
         <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
           <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
@@ -116,7 +116,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center overflow-x-hidden my-[22%] md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-semibold font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
@@ -165,7 +165,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3 }}
         viewport={{ once: true }}
-        className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[80%]   m-auto p-[30px] rounded-[1rem] my-10 "
+        className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[60%]   m-auto p-[30px] rounded-[1rem] mt-10 "
       >
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
@@ -216,6 +216,7 @@ export default function Home() {
           </ParallaxText> */}
       </div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-[2rem]">
+
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
@@ -229,9 +230,9 @@ export default function Home() {
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
-      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem] mt-[4rem]">Letter from the Secretary General</p>
-      <div className=" grid md:grid-cols-2 p-[1rem] md:p-[2.5rem]">
-        
+      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem]">Letter from the Secretary General</p>
+      <div className=" grid md:grid-cols-2 p-[2.5rem]">
+
         <Image src={alden} className=" flex justify-center w-[100vw] p-[2rem]" />
         <Tab className="h-[100%]" />
       </div>
