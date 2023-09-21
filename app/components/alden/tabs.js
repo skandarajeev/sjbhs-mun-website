@@ -7,7 +7,7 @@ const allIngredients = [
     { icon: "", label: "Letter", 
     
     content: 
-    <div>
+    <div className=""> 
       <h1 className="font-medium mb-[10px]">Dear delegates and faculty advisors,</h1>
       <p className="mb-[10px]">It is my very great pleasure to invite you to the 11th edition of the St. Joseph's Boys' High School Model United Nations.
 
@@ -49,7 +49,7 @@ export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
-    <div className={`${style.window} w-[100%] md:w-[100%]`}>
+    <div className={`${style.window} w-[100%] md:w-[100%] shadow-lg shadow-teal-600`}>
       <nav className={style.nav}>
         <ul className={style.ul}> 
           {tabs.map(item => (
