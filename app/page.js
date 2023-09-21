@@ -215,7 +215,7 @@ export default function Home() {
             Leave you invigorated
           </ParallaxText> */}
       </div>
-      <div className=" flex-col justify-content lg:p-[8rem]">
+      <div className=" flex-col justify-content lg:p-[8rem] mb-[2rem]">
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
@@ -229,10 +229,10 @@ export default function Home() {
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
-      <p>Word from the Secretary General</p>
+      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem]">Letter from the Secretary General</p>
       <div className=" grid md:grid-cols-2 p-[2.5rem]">
 
-        <Image src={alden} className="w-[100vw] p-[2rem]" />
+        <Image src={alden} className=" flex justify-center w-[100vw] p-[2rem]" />
         <Tab className="h-[100%]" />
       </div>
     </>

@@ -42,9 +42,18 @@ body {
   line-height: inherit;
   background-color: #131313;
   overflow-x: hidden;
- 
+  height: 100%;
   width: 100vw;
 }
+
+
+.mun-gradient {
+  background: radial-gradient(75.20% 41.10% at 50.00% 58.90%, #E4C97C 0%, #E0B055 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 /**
   * WHAT IS THIS FILE?

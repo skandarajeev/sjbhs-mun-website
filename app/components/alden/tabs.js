@@ -4,7 +4,27 @@ import style from "./styles.module.css"
 import alden from "../../media/alden.jpg"
 import { motion, AnimatePresence } from "framer-motion"
 const allIngredients = [
-  { icon: "", label: "Letter", content: "The" },
+  {
+    icon: "", label: "Letter",
+
+    content:
+      <div>
+        <h1 className="font-medium mb-[10px]">Dear delegates and faculty advisors,</h1>
+        <p className="mb-[10px]">It is my very great pleasure to invite you to the 11th edition of the St. Joseph's Boys' High School Model United Nations.
+
+          SJBHSMUN has earned a distinguished reputation for fostering effective discourse, critical thinking, and diplomacy among the world's future leaders. As we prepare to embark on yet another unforgettable journey of diplomacy and debate, I want to share with you the essence of our MUN conference and the venerable institution that hosts
+
+          When you choose to participate in SJBHSMUN, you are not just attending another conference, you are joining a tradition of excellence. Our conference is a platform where students from diverse backgrounds and cultures come together to discuss, debate, and resolve global issues. It is an opportunity to engage in discourse and develop essential skills such as negotiation, public speaking, and critical thinking.
+
+          At SJBHSMUN this year, we offer to you meticulously crafted committees to provide a challenging and immersive experience. You will find yourself in the shoes of diplomats, tackling real-world problems, and seeking solutions through diplomacy and compromise. This is not just a simulation; it's a chance to develop a deeper understanding of global affairs and international relations.
+
+          I fondly remember my own time at SJBHS and how it shaped my individuality. The friendships formed, the knowledge gained, and the unforgettable memories created during those conferences have had a profound impact on my life. It is my hope that you too will have similar experiences and take away valuable lessons that will serve you well in your future
+        </p>
+        <h2 className="font-medium">
+          The Secretariat and I eagerly await your presence at #27 Museum Road in October!
+        </h2>
+      </div>
+  },
   { icon: "", label: "Advice", content: "Boom!" },
   {
     icon: "",
