@@ -50,7 +50,7 @@ export default function page() {
               <h3 class="mb-4 text-2xl font-semibold">DELEGATION REGISTRATION</h3>
               <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">Relevant for multiple users, extended & premium support.</p>
               <div class="flex justify-center items-baseline my-8">
-                <span class="mr-2 text-5xl font-extrabold">₹3000 + ₹1300</span>
+                <span class="mr-2 text-5xl font-extrabold">₹1299</span>
                 <span class="text-gray-500 dark:text-gray-400" >/per-person</span>
               </div>
 

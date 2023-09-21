@@ -116,7 +116,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center overflow-x-hidden my-[22%] md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-semibold font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
@@ -165,7 +165,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3 }}
         viewport={{ once: true }}
-        className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[80%]   m-auto p-[30px] rounded-[1rem] my-10 "
+        className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[60%]   m-auto p-[30px] rounded-[1rem] mt-10 "
       >
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
         <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
@@ -216,6 +216,7 @@ export default function Home() {
           </ParallaxText> */}
       </div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-[2rem]">
+
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
