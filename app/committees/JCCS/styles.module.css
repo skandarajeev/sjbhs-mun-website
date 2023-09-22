@@ -1,0 +1,42 @@
+.big {
+    background-image: url("../../media/gA.svg");
+    background-size: cover;
+    background-clip: inherit;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.back {
+    background-image: url("../../media/gaB.jpg");
+    background-size: cover;
+}
+
+.boi {
+    font-size: 100px;
+}
+
+
+.mungradient {
+    background: radial-gradient(75.20% 41.10% at 50.00% 58.90%, #E4C97C 0%, #E0B055 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.button {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-size: 1vw;
+    fill: #ffffff;
+    padding: 10px 20px;
+    font-family: 'Poppins';
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    color: #ffffff;
+    background-color: rgba(255, 44, 85, 0);
+    border-color: #fff12c;
+    border-radius: 50px 50px 50px 50px;
+}
