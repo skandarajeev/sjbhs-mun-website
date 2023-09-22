@@ -6,7 +6,8 @@ import * as React from "react";
 import { AnimatePresence } from "framer-motion";
 import GA from "../media/thunder.png"
 import Link from "next/link";
-
+import ILO from "../media/FINAL_ILO.svg?url"
+import Image from "next/image"
 const Committees = (details) => {
     return(
         <motion.div initial={{ opacity: 0 }}
@@ -15,7 +16,7 @@ const Committees = (details) => {
         viewport={{ once: true }}
         className= {` box text-white General_Assembly flex flex-col gap-6 md:grid grid-cols-6 h-[100%] bg-[#000000] rounded-3xl p-[2.5rem] md:p-[5rem] lg:p-[10rem] mb-[4rem] m-[1rem] md:m-[2rem] lg-[1rem] md:mb-[8rem]`}>
             <div className="col-span-1">
-               <p>logo</p>
+               <Image src ={details.src}/>
             </div>
             <div className="col-span-5">
                 <p className="text-[2rem]  font-bold mb-[1.25rem] md:mb-[2.5rem]">{details.name}</p>
@@ -57,14 +58,16 @@ const Committees = (details) => {
 export default function page (){
     return (
         <div className="p-[1rem] md:p-[6rem] lg:p-[10rem]">
-            <Committees name="General Assembly" className="" />
-            <Committees name="General Assembly" />
-            <Committees name="General Assembly" />
-            <Committees name="General Assembly" />
-            <Committees name="General Assembly" />
-            <Committees name="General Assembly" />
-            <Committees name="General Assembly" />
-
+            <Committees name="International Labour Organisation" src={ILO} className="" />
+            <Committees name="UNGA 3rd committee: SOCHUM" />
+            <Committees name="United Nations Security Council" />
+            <Committees name="Historic Lok Sabha" />
+            <Committees name="The Tricontinental Conference" />
+            <Committees name="The Joint Crisis Committee: Sovietsky" />
+            <Committees name="The Joint Crisis Committee: Sovietsky" />
+            <Committees name="The Joint Crisis Committee: Atlantic " />
+            <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" />
+    
         </div>
     );
 }

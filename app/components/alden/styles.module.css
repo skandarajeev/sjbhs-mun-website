@@ -1,8 +1,8 @@
 .body {
-    --accent: #8855ff;
+    /* --accent: #8855ff; */
     width: 100vw;
     height: 100vh;
-    background: var(--accent);
+
     overflow: hidden;
 
     margin: 0;
@@ -16,22 +16,26 @@
     height: auto;
     margin: auto;
     border-radius: 10px;
-    background: white;
+    background: black;
+    color: white;
+    backdrop-filter: blur(10px);
     overflow: hidden;
-    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    /* box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
         0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
         0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    display: flex; */
     display: flex;
     flex-direction: column;
+
 }
 
 .nav {
-    background: #fdfdfd;
+    background: black;
 
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid black;
     height: 44px;
     padding: 20px;
 }
@@ -83,7 +87,7 @@
     width: 100%;
     padding: 10px 15px;
     position: relative;
-    background: white;
+
     cursor: pointer;
     height: 24px;
     display: flex;
@@ -101,12 +105,9 @@
     left: 0;
     right: 0;
     height: 1px;
-    background: var(--accent);
 }
 
-li.selected {
-    background: #eee;
-}
+li.selected {}
 
 .li button {
     width: 20px;

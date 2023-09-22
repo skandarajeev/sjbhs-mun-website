@@ -51,7 +51,7 @@ export default function Tab() {
   const [selectedTab, setSelectedTab] = useState(tabs[0])
 
   return (
-    <div className={`${style.window} w-[100%] md:w-[100%]`}>
+    <div className={`${style.window} w-[100%] md:w-[100%] shadow-lg shadow-teal-600`}>
       <nav className={style.nav}>
         <ul className={style.ul}>
           {tabs.map(item => (
