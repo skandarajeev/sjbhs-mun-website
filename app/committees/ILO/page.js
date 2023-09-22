@@ -26,16 +26,10 @@ export default function GA() {
           <p
             className={` text-white text-center md:text-left text-[1rem] leading-[2rem] tracking-[1.8px] mb-[3rem] p-[0.6rem] `}
           >
-            The General Assembly Plenary is one of the most crucial bodies
-            within a Model United Nations conference, reflecting the global
-            nature of the United Nations itself. Delegates in this committee
-            represent member states from around the world and engage in
-            comprehensive discussions on a wide range of global challenges,
-            international conflicts, and sustainable development goals. As the
-            primary deliberative, policy-making, and representative organ of the
-            MUN simulation, the General Assembly Plenary aims to foster
-            cooperation, dialogue, and consensus-building among its diverse
-            participants.
+            In the tapestry of our society, where the threads of labour rights lie in the control of hands that know no bounds and constantly subjects the workforce to mistreatment, disfigured wages and unfit working conditions, the necessity for the presence of a just organisation is imperative.
+Speaking up in a world where there penetrates a constant fear of uncertainty, ILO gives voice to their concerns and upholds their rights, which would otherwise find themselves in the shambles. 
+The books of history are etched with the agony and dilemma that the labour force has always been put through, however, there is a sense of beaming hope that can terminate this prolonged struggle, the opportunity to rewrite history, the chance to equip the deprived. A hope that has manifested as the ILO.
+
           </p>
         </div>
         <div>
@@ -55,7 +49,7 @@ export default function GA() {
 
           {/* ----- */}
           <div className="mt-[5rem] mb-[5rem] w-[100%] rounded-xl p-[1rem] flex flex-col">
-            
+            <p className={`${styles.mungradient} flex justify-center mb-[2rem] text-[2rem] font-semibold`}>COMING SOON!</p>
             <button type="button" class="mb-[1rem] text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 ">Country Matrix</button>
             <button type="button" class="text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Background guide</button>
 
@@ -66,7 +60,7 @@ export default function GA() {
  
 
   {/* EB INFO */}
-  <div className="grid grid-cols-1 md:grid-cols-4 place-items-center mt-7 gap-5">
+  <div className="grid grid-cols-1 md:grid-cols-4 place-items-center mt-7 gap-5 md:px-4">
        {/* 1 */}
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-indigo-800 dark:border-gray-700">
             <div class="flex justify-end px-4 pt-4">

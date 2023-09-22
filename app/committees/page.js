@@ -8,6 +8,13 @@ import GA from "../media/thunder.png"
 import Link from "next/link";
 import ILO from "../media/FINAL_ILO.svg?url"
 import Image from "next/image"
+import SOCHUM from "../media/FINAL_SOCHUM.svg?url"
+import NATO from "../media/FINAL_NATO.svg?url"
+import TCC from "../media/FINAL_TCC.svg?url"
+import BBMP from "../media/FINAL_BBMP.svg?url"
+
+
+
 const Committees = (details) => {
     return(
         <motion.div initial={{ opacity: 0 }}
@@ -15,8 +22,8 @@ const Committees = (details) => {
         transition={{ duration: 2 }}
         viewport={{ once: true }}
         className= {` box text-white General_Assembly flex flex-col gap-6 md:grid grid-cols-6 h-[100%] bg-[#000000] rounded-3xl p-[2.5rem] md:p-[5rem] lg:p-[10rem] mb-[4rem] m-[1rem] md:m-[2rem] lg-[1rem] md:mb-[8rem]`}>
-            <div className="col-span-1">
-               <Image src ={details.src}/>
+            <div className="col-span-1 flex justify-center md:block">
+                <Image src={details.src} height={100} />
             </div>
             <div className="col-span-5">
                 <p className="text-[2rem]  font-bold mb-[1.25rem] md:mb-[2.5rem]">{details.name}</p>
@@ -38,7 +45,7 @@ const Committees = (details) => {
                         </svg>
                     </div> */}
                     
-                    <Link href="/committees/GeneralAssembly">
+                    <Link href={`${details.more}`}>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded items-center  ">
                             Know more
                         </button>
@@ -58,16 +65,15 @@ const Committees = (details) => {
 export default function page (){
     return (
         <div className="p-[1rem] md:p-[6rem] lg:p-[10rem]">
-            <Committees name="International Labour Organisation" src={ILO} className="" />
-            <Committees name="UNGA 3rd committee: SOCHUM" />
-            <Committees name="United Nations Security Council" />
-            <Committees name="Historic Lok Sabha" />
-            <Committees name="The Tricontinental Conference" />
-            <Committees name="The Joint Crisis Committee: Sovietsky" />
-            <Committees name="The Joint Crisis Committee: Sovietsky" />
-            <Committees name="The Joint Crisis Committee: Atlantic " />
-            <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" />
-    
+            <Committees name="International Labour Organisation" src={ILO} more = "/committees/ILO" className="" />
+            <Committees name="Social ,Cultural, and Humanitarian Committee" src={SOCHUM}  more = "/committees/SOCHUM" />
+            <Committees name="United Nations Security Council"  more = "/committees/UNSC"/>
+            <Committees name="Historic Lok Sabha"  more = "/committees/LS"/>
+            <Committees name="The Tricontinental Conference" src={TCC}  more = "/committees/TCC"/>
+            <Committees name="The Joint Crisis Committee: Sovetsky"  more = "/committees/JCCS"/>
+            <Committees name="The Joint Crisis Committee: Atlantic "  src={NATO} more = "/committees/JCCA"/>
+            <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP}  more = "/committees/BBMP"/>
+            <Committees name="GRAM PANCHAYAT" src={BBMP}  more = "/committees/BBMP"/>
         </div>
     );
 }
