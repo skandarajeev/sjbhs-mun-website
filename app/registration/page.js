@@ -85,8 +85,8 @@ export default function page() {
           </div>
         </div>
       </section>
-    //<Indiregister />
-    //<DelegationRegistration />
+      <Indiregister />
+      <DelegationRegistration />
     </div>
   );
 }
