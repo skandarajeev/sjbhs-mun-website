@@ -98,6 +98,19 @@ export const ParallaxText = ({ baseVelocity, children }) => {
 // Velocity scroller end
 
 export default function Home() {
+  var countDownDate = new Date("Oct 23, 2023 09:00:00").getTime();
+  var now = new Date().getTime();
+  var timeleft = countDownDate - now;
+
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  if (timeleft < 0) {
+    days = 0;
+    hours = 0;
+    minutes = 0;
+  }
+
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -180,13 +193,13 @@ export default function Home() {
 
         <div className="flex gap-[3rem] m-auto mb-2">
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            30
+            {days}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            12
+            {minutes}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            60
+            {hours}
           </p>
         </div>
 
@@ -216,7 +229,6 @@ export default function Home() {
           </ParallaxText> */}
       </div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-[2rem]">
-
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
@@ -230,10 +242,14 @@ export default function Home() {
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
-      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem]">Letter from the Secretary General</p>
+      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem]">
+        Letter from the Secretary General
+      </p>
       <div className=" grid md:grid-cols-2 p-[2.5rem]">
-
-        <Image src={alden} className=" flex justify-center w-[100vw] p-[2rem]" />
+        <Image
+          src={alden}
+          className=" flex justify-center w-[100vw] p-[2rem]"
+        />
         <Tab className="h-[100%]" />
       </div>
     </>
