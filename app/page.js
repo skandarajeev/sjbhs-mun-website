@@ -5,19 +5,12 @@ import logo from "./media/MUN LOGO.png";
 import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
-import { useState } from "react";
-import { AnimatePresence, spring } from "framer-motion";
+
 import Tab from "./components/alden/tabs.js";
 
-import { useRef } from "react";
+
 import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
+  motion
 } from "framer-motion";
 
 const Event = (details) => {
@@ -25,10 +18,10 @@ const Event = (details) => {
     <motion.div
       whileInView="visible"
       initial="hidden"
-      transition={{ duration: 0.8, type: "spring", bounce: "0.4" }}
+      transition={{ duration: 0.8, type: "spring", bounce: "0.2" }}
       viewport={{ once: true }}
       variants={{
-        hidden: { opacity: 0, y: 200, scale: 0.8 },
+        hidden: { opacity: 0, y: 100, scale: 0.8 },
         visible: { opacity: 1, y: 50, scale: 1 },
       }}
     >
@@ -48,54 +41,7 @@ const Event = (details) => {
   );
 };
 
-// velocity scroller
 
-export const ParallaxText = ({ baseVelocity, children }) => {
-  function wrap(min, max, value) {
-    const range = max - min;
-    return ((((value - min) % range) + range) % range) + min;
-  }
-
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false,
-  });
-
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-
-  const directionFactor = useRef(1);
-  useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-    baseX.set(baseX.get() + moveBy);
-  });
-
-  return (
-    <motion.div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-      </motion.div>
-    </motion.div>
-  );
-};
-// Velocity scroller end
 
 export default function Home() {
   return (
@@ -108,9 +54,6 @@ export default function Home() {
         rel="stylesheet"
       ></link>
 
-      {/* NAVBAR */}
-
-      {/* NAVBBAR END */}
 
       {/* HERO SECTION! */}
 
@@ -202,20 +145,9 @@ export default function Home() {
       {/* Committees Reveal section */}
 
       <div className=" flex flex-col gap-3 headingText  mx-2 ">
-        {/* <ParallaxText
-            baseVelocity={-2}
-            className="font-scroller  xl:text-7xl text-1xl text-center text-white "
-          >
-           --Committees
-          </ParallaxText>
-          <ParallaxText
-            baseVelocity={+4}
-            className="font-poppins xl:text-7xl text-5xl text-center text-white "
-          >
-            --Committees
-          </ParallaxText> */}
+
       </div>
-      <div className=" flex-col justify-content lg:p-[8rem] mb-[4rem]">
+      <div className=" flex-col justify-content lg:p-[8rem] mb-20">
 
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
@@ -226,15 +158,14 @@ export default function Home() {
           <Event name="TCC" details="" />
         </div>
       </div>
-      {/* <div className="SecGen grid grid-rows-2 md:grid-cols-2 w-[100%] h-[500px] md:p-[3rem]">
-        
-        <Tab className="taboo p-[5rem]" />
-      </div> */}
-      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem] ">Letter from the Secretary General</p>
-      <div className=" grid md:grid-cols-2 p-[2.5rem]">
+      <div className="md:mt-0 mt-40">
+        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">LETTER FROM SECRETARY GENERAL</h1>
 
-        <Image src={alden} className=" flex justify-center w-[100vw] p-[1rem]" />
-        <Tab className="h-[100%]" />
+        <div className=" grid md:grid-cols-2 p-[2.5rem]">
+
+          <Image src={alden} className=" flex justify-center w-[100vw] p-[1rem]" />
+          <Tab className="h-[100%]" />
+        </div>
       </div>
     </>
   );
