@@ -5,99 +5,60 @@ import logo from "./media/MUN LOGO.png";
 import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
-import { useState } from "react";
-import { AnimatePresence, spring } from "framer-motion";
+import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
 
-import { useRef } from "react";
+
 import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame,
+  motion
 } from "framer-motion";
 
 const Event = (details) => {
   return (
-    <motion.div
-      whileInView="visible"
-      initial="hidden"
-      transition={{ duration: 0.8, type: "spring", bounce: "0.4" }}
-      viewport={{ once: true }}
-      variants={{
-        hidden: { opacity: 0, y: 200, scale: 0.8 },
-        visible: { opacity: 1, y: 50, scale: 1 },
-      }}
-    >
+    <Link href={details.link}>
       <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
+        whileInView="visible"
+        initial="hidden"
+        transition={{ duration: 0.8, type: "spring", bounce: "0.2" }}
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 100, scale: 0.8 },
+          visible: { opacity: 1, y: 50, scale: 1 },
+        }}
       >
-        <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-          <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
-          <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
-            {details.name}
-          </p>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring" }}
+          className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
+        >
+          <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
+            <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
+            <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
+              {details.name}
+            </p>
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 
-// velocity scroller
 
-export const ParallaxText = ({ baseVelocity, children }) => {
-  function wrap(min, max, value) {
-    const range = max - min;
-    return ((((value - min) % range) + range) % range) + min;
-  }
-
-  const baseX = useMotionValue(0);
-  const { scrollY } = useScroll();
-  const scrollVelocity = useVelocity(scrollY);
-  const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 50,
-    stiffness: 400,
-  });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-    clamp: false,
-  });
-
-  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
-
-  const directionFactor = useRef(1);
-  useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-    if (velocityFactor.get() < 0) {
-      directionFactor.current = -1;
-    } else if (velocityFactor.get() > 0) {
-      directionFactor.current = 1;
-    }
-
-    moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-    baseX.set(baseX.get() + moveBy);
-  });
-
-  return (
-    <motion.div className="parallax">
-      <motion.div className="scroller" style={{ x }}>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-        <span>{children}</span>
-      </motion.div>
-    </motion.div>
-  );
-};
-// Velocity scroller end
 
 export default function Home() {
+  var countDownDate = new Date("Oct 23, 2023 09:00:00").getTime();
+  var now = new Date().getTime();
+  var timeleft = countDownDate - now;
+
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  if (timeleft < 0) {
+    days = 0;
+    hours = 0;
+    minutes = 0;
+  }
+
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -108,9 +69,6 @@ export default function Home() {
         rel="stylesheet"
       ></link>
 
-      {/* NAVBAR */}
-
-      {/* NAVBBAR END */}
 
       {/* HERO SECTION! */}
 
@@ -180,13 +138,13 @@ export default function Home() {
 
         <div className="flex gap-[3rem] m-auto mb-2">
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            30
+            {days}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            12
+            {minutes}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            60
+            {hours}
           </p>
         </div>
 
@@ -202,39 +160,27 @@ export default function Home() {
       {/* Committees Reveal section */}
 
       <div className=" flex flex-col gap-3 headingText  mx-2 ">
-        {/* <ParallaxText
-            baseVelocity={-2}
-            className="font-scroller  xl:text-7xl text-1xl text-center text-white "
-          >
-           --Committees
-          </ParallaxText>
-          <ParallaxText
-            baseVelocity={+4}
-            className="font-poppins xl:text-7xl text-5xl text-center text-white "
-          >
-            --Committees
-          </ParallaxText> */}
+
       </div>
-      <div className=" flex-col justify-content lg:p-[8rem] mb-[4rem]">
+      <div className=" flex-col justify-content lg:p-[8rem] mb-20">
 
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC" details="" />
-          <Event name="LOK SABHA" details="" />
-          <Event name="GA1" details="" />
-          <Event name="UNSC" details="" />
-          <Event name="GA1" details="" />
-          <Event name="TCC" details="" />
+          <Event name="JCC" link="/committees/JCC" />
+          <Event name="LOK SABHA" link="/committees/LS" />
+          <Event name="ILO" link="/committees/ILO" />
+          <Event name="UNSC" link="/committees/UNSC" />
+          <Event name="SOCHUM" link="/committees/SOCHUM" />
+          <Event name="TCC" link="/committees/TCC" />
         </div>
       </div>
-      {/* <div className="SecGen grid grid-rows-2 md:grid-cols-2 w-[100%] h-[500px] md:p-[3rem]">
-        
-        <Tab className="taboo p-[5rem]" />
-      </div> */}
-      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem] ">Letter from the Secretary General</p>
-      <div className=" grid md:grid-cols-2 p-[2.5rem]">
+      <div className="md:mt-0 mt-40">
+        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">LETTER FROM SECRETARY GENERAL</h1>
 
-        <Image src={alden} className=" flex justify-center w-[100vw] p-[1rem]" />
-        <Tab className="h-[100%]" />
+        <div className=" grid md:grid-cols-2 p-[2.5rem]">
+
+          <Image src={alden} className=" flex justify-center w-[100vw] p-[1rem]" />
+          <Tab className="h-[100%]" />
+        </div>
       </div>
 
      

@@ -43,7 +43,7 @@ export default function page() {
                   <span>Free updates: <span class="font-semibold">6 months</span></span>
                 </li>
               </ul>
-              <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+              <a href="/registration/individual" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
             </div>
 
             <div class="flex flex-col p-6 mx-auto max-w-lg text-center rounded-lg border shadow-violet-800 shadow-lg dark:border-gray-600 xl:p-8 dark:bg-black dark:text-white">
@@ -78,15 +78,14 @@ export default function page() {
                   <span>Free updates: <span class="font-semibold">24 months</span></span>
                 </li>
               </ul>
-              <a href="#" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
+              <a href="/registration/delegation" class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</a>
             </div>
 
 
           </div>
         </div>
       </section>
-    //<Indiregister />
-    //<DelegationRegistration />
+
     </div>
   );
 }
