@@ -5,7 +5,7 @@ import logo from "./media/MUN LOGO.png";
 import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
-
+import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
 
 
@@ -15,29 +15,31 @@ import {
 
 const Event = (details) => {
   return (
-    <motion.div
-      whileInView="visible"
-      initial="hidden"
-      transition={{ duration: 0.8, type: "spring", bounce: "0.2" }}
-      viewport={{ once: true }}
-      variants={{
-        hidden: { opacity: 0, y: 100, scale: 0.8 },
-        visible: { opacity: 1, y: 50, scale: 1 },
-      }}
-    >
+    <Link href={details.link}>
       <motion.div
-        whileHover={{ scale: 1.1 }}
-        transition={{ type: "spring" }}
-        className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
+        whileInView="visible"
+        initial="hidden"
+        transition={{ duration: 0.8, type: "spring", bounce: "0.2" }}
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, y: 100, scale: 0.8 },
+          visible: { opacity: 1, y: 50, scale: 1 },
+        }}
       >
-        <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-          <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
-          <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
-            {details.name}
-          </p>
-        </div>
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring" }}
+          className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
+        >
+          <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
+            <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
+            <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
+              {details.name}
+            </p>
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </Link>
   );
 };
 
@@ -163,12 +165,12 @@ export default function Home() {
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
 
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC" details="" />
-          <Event name="LOK SABHA" details="" />
-          <Event name="GA1" details="" />
-          <Event name="UNSC" details="" />
-          <Event name="GA1" details="" />
-          <Event name="TCC" details="" />
+          <Event name="JCC" link="/committees/JCC" />
+          <Event name="LOK SABHA" link="/committees/LS" />
+          <Event name="ILO" link="/committees/ILO" />
+          <Event name="UNSC" link="/committees/UNSC" />
+          <Event name="SOCHUM" link="/committees/SOCHUM" />
+          <Event name="TCC" link="/committees/TCC" />
         </div>
       </div>
       <div className="md:mt-0 mt-40">
