@@ -65,7 +65,7 @@ export function Navibar() {
               </Link>
             </li>
             <li>
-              <Link href="#">
+              <Link href="/contact">
                 <button
                   onClick={() => setOpen(false)}
                   className={`block py-2 ${

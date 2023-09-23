@@ -63,9 +63,9 @@ export default function page() {
           </div>
 
 
-          {/* SECTION: 2 - What is SjbhsMun */}
+          {/* SECTION: 2 -ABOUT SjbhsMun */}
 
-          <div className= {` ${style.background}  md:grid md:grid-cols-2 background m-[0.5rem] rounded-[2rem] h-[100%] p-[0.5rem]`}>
+          <div className= {` ${style.background}  md:grid md:grid-cols-2 background m-[0.5rem] rounded-[2rem] h-[100%] p-[0.5rem] md:m-[3rem] md:mx-[5vw]`}>
             <div className="relative  mb-8 flex items-center justify-center">
                 <p className="text-white text-center font-poppins text-[8vw] md:text-[4vw] ">About SJBHSMUN</p>
             </div>
@@ -78,52 +78,14 @@ export default function page() {
 
         {/* SECTION - 3 - Why SJBHSMUN */}
 
-        {/* <div className="grid grid-cols-2">
-          
-            <div>
-              <p>Why SJBHSMUN</p>
+
+        <div className= {` ${style.background}  md:grid md:grid-cols-2 background m-[0.5rem] rounded-[2rem] h-[100%] p-[0.5rem] md:m-[3rem] md:mx-[5vw]`}>
+            <div className="relative  mb-8 flex items-center justify-center">
+                <p className="text-white text-center font-poppins text-[8vw] md:text-[4vw] ">Why SJBHSMUN?</p>
             </div>
-            <div className="grid grid-cols-2">
-                <div className="grid grid-rows-2">
-
-                <div>
-                  <Image src= {gavel}></Image>
-                  <p>While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
-                </div>
-
-                <div>
-                  <Image src= {gavel}></Image>
-                  <p>While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
-
-                </div>
-                <div>
-                  <Image src= {gavel}></Image>
-                  <p>While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
-
-                </div>
-
-                <div>
-                  <Image src= {gavel}></Image>
-                  <p>While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
-
-                </div>
-
-                <div>
-                  <Image src= {gavel}></Image>
-                  <p>While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
-
-                </div>
-                </div>
-                
-            </div>
-          
-        </div> */}
-         <div className= {` ${style.background} relative md:grid md:grid-cols-2 background m-[1rem] md:m-[2rem] rounded-[2rem]  p-[2rem]`}>
-            <div className={`${style.backie} relative  mb-8 flex items-center justify-center rounded-xl m-[0.5rem] md:m-[2rem]`}>
-                <p className="text-white text-center font-poppins text-[8vw] md:text-[4vw] pt-6 ">Why SJBHSMUN?</p>
-            </div>
-            <div className={` p-[1rem] m-[2rem] md md:p-[2rem] text-center md:text-left rounded-xl h-screen`}>
-                <p className="text-white  tracking-[1.5px] md:tracking-[1px] leading-[1.5rem] md:leading-[2rem]">SJBHSMUN, short for St. Joseph's Boys' High School Model United Nations, is a dynamic and prestigious platform that empowers young minds to engage with global issues, hone their diplomacy and public speaking skills, and develop a deeper understanding of international relations. At SJBHSMUN, we believe in the power of experiential learning. Our conferences are designed to foster critical thinking, research skills, and public speaking abilities. Delegates not only gain a comprehensive understanding of international issues but also develop valuable life skills that will serve them well in their future endeavors. We are committed to creating an inclusive and diverse environment where students from different backgrounds, cultures, and perspectives come together to discuss and address global issues. SJBHSMUN encourages open dialogue and promotes an atmosphere of respect for all viewpoints. While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.</p>
+            <div className={`${style.backie} relative  p-[1rem] m-[2rem] md:p-[2rem] text-left  md:text-left rounded-lg `}>
+                <p className=" text-white  tracking-[1.5px] md:tracking-[1px] leading-[1.5rem] md:leading-[2rem] text-[1rem]">            SJBHSMUN, short for St. Joseph's Boys' High School Model United Nations, is a dynamic and prestigious platform that empowers young minds to engage with global issues, hone their diplomacy and public speaking skills, and develop a deeper understanding of international relations. At SJBHSMUN, we believe in the power of experiential learning. Our conferences are designed to foster critical thinking, research skills, and public speaking abilities. Delegates not only gain a comprehensive understanding of international issues but also develop valuable life skills that will serve them well in their future endeavors. We are committed to creating an inclusive and diverse environment where students from different backgrounds, cultures, and perspectives come together to discuss and address global issues. SJBHSMUN encourages open dialogue and promotes an atmosphere of respect for all viewpoints. While SJBHSMUN focuses on global issues, we also emphasize the importance of local action. Our conferences often inspire delegates to take what they've learned and apply it to their own communities, making a positive impact at both the local and international levels.
+</p>
             </div>
 
           </div>
