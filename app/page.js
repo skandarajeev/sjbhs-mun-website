@@ -219,16 +219,16 @@ export default function Home() {
             baseVelocity={-2}
             className="font-scroller  xl:text-7xl text-1xl text-center text-white "
           >
-            Six Committees to
+           --Committees
           </ParallaxText>
           <ParallaxText
             baseVelocity={+4}
             className="font-poppins xl:text-7xl text-5xl text-center text-white "
           >
-            Leave you invigorated
+            --Committees
           </ParallaxText> */}
       </div>
-      <div className=" flex-col justify-content lg:p-[8rem] mb-[2rem]">
+      <div className=" flex-col justify-content lg:p-[8rem] mb-[4rem]">
         <div className="flex flex-wrap justify-around">
           <Event name="JCC" details="" />
           <Event name="LOK SABHA" details="" />
@@ -242,13 +242,13 @@ export default function Home() {
         
         <Tab className="taboo p-[5rem]" />
       </div> */}
-      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem]">
+      <p className="flex  mun-gradient justify-center text-white font-semibold text-[1.5rem] md:text-[3rem] ">
         Letter from the Secretary General
       </p>
       <div className=" grid md:grid-cols-2 p-[2.5rem]">
         <Image
           src={alden}
-          className=" flex justify-center w-[100vw] p-[2rem]"
+          className=" flex justify-center w-[100vw] p-[1rem]"
         />
         <Tab className="h-[100%]" />
       </div>
