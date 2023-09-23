@@ -44,6 +44,19 @@ const Event = (details) => {
 
 
 export default function Home() {
+  var countDownDate = new Date("Oct 23, 2023 09:00:00").getTime();
+  var now = new Date().getTime();
+  var timeleft = countDownDate - now;
+
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  if (timeleft < 0) {
+    days = 0;
+    hours = 0;
+    minutes = 0;
+  }
+
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -123,13 +136,13 @@ export default function Home() {
 
         <div className="flex gap-[3rem] m-auto mb-2">
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            30
+            {days}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            12
+            {minutes}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            60
+            {hours}
           </p>
         </div>
 
