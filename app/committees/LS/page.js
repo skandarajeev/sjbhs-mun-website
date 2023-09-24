@@ -25,11 +25,11 @@ export default function GA() {
             <p
               className={` text-white text-center md:text-left text-[1rem] leading-[2rem] tracking-[1.8px] mb-[3rem] p-[0.6rem] `}
             >
-              The Lok Sabha, India's vibrant parliament, unfurls as a beacon amidst the turbulent winds of democracy, like a  lighthouse guiding ships through stormy seas. Each elected member, a vivid brushstroke on the canvas of history, shaping the destiny of a nation like the conductor of a grand symphony, orchestrating harmony amidst diverse melodies.
+                {`The Lok Sabha, India's vibrant parliament, unfurls as a beacon amidst the turbulent winds of democracy, like a  lighthouse guiding ships through stormy seas. Each elected member, a vivid brushstroke on the canvas of history, shaping the destiny of a nation like the conductor of a grand symphony, orchestrating harmony amidst diverse melodies.
 
-              With the echoes of struggle and freedom as its foundation, the Lok Sabha stands tall, a colossal phoenix rising from the ashes of colonial oppression, igniting the flame of sovereignty that continues to illuminate the dreams and aspirations of more than a billion minds.
+                With the echoes of struggle and freedom as its foundation, the Lok Sabha stands tall, a colossal phoenix rising from the ashes of colonial oppression, igniting the flame of sovereignty that continues to illuminate the dreams and aspirations of more than a billion minds.
 
-              The Lok Sabha bore witness to a nation grappling with ominous shadows of unrest. The growing tension, stemmed from the relentless Naxal movement that had seeped into the country. A threat loomed, one of potential aggravation from the Union of India, threatening the very fabric of unity. The hallowed halls of the Lok Sabha reverberated with impassioned debates as leaders, sought hope. It was an era when the destiny of a nation hung precariously and the echoes of those tumultuous times continue to resonate through the corridors of history.
+                The Lok Sabha bore witness to a nation grappling with ominous shadows of unrest. The growing tension, stemmed from the relentless Naxal movement that had seeped into the country. A threat loomed, one of potential aggravation from the Union of India, threatening the very fabric of unity. The hallowed halls of the Lok Sabha reverberated with impassioned debates as leaders, sought hope. It was an era when the destiny of a nation hung precariously and the echoes of those tumultuous times continue to resonate through the corridors of history.`}
             </p>
           </div>
           <div>

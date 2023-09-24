@@ -165,12 +165,16 @@ export default function Home() {
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
 
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC" link="/committees/JCC" />
+          <Event name="JCC: Atlantic" link="/committees/JCCA" />
+          <Event name="JCC: Sovetsky" link="/committees/JCCS" />
           <Event name="LOK SABHA" link="/committees/LS" />
           <Event name="ILO" link="/committees/ILO" />
           <Event name="UNSC" link="/committees/UNSC" />
           <Event name="SOCHUM" link="/committees/SOCHUM" />
           <Event name="TCC" link="/committees/TCC" />
+          <Event name="BBMP" link="/committees/BBMP" />
+          <Event name="Gram Panchayat" link="/committees/GP" />
+
         </div>
       </div>
       <div className="md:mt-0 mt-40">

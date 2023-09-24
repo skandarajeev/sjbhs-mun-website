@@ -12,7 +12,9 @@ import SOCHUM from "../media/FINAL_SOCHUM.svg?url"
 import NATO from "../media/FINAL_NATO.svg?url"
 import TCC from "../media/FINAL_TCC.svg?url"
 import BBMP from "../media/FINAL_BBMP.svg?url"
-
+import LS from "../media/FINAL_LS.svg?url"
+import JCCS from "../media/FINAL_JCCS.svg?url"
+import UNSC from "../media/FINAL_UNSC.svg?url"
 
 
 const Committees = (details) => {
@@ -80,13 +82,15 @@ export default function page (){
             />
 
             <Committees name="United Nations Security Council" 
+             src = {UNSC}
              more = "/committees/UNSC"
              description = {`"In any given scenario, the driving force behind any government should be the betterment of people. Every human being irrespective of what marks their actions cast on the society must be treated with dignity. 
              Things are not always how we perceive them to be, most often the facts of a scenario remain blurred by the illusions of delusion portrayed to the society. 
              Fear has creeped its way into our daily life and has strongly established its perpetual state. As a result, it has become a matter of commonality, but what we as a society should not have to adapt to is the terror casted by the darkest shadow that threatens peace, security and the very sense of humanity. "`}
             />
             
-            <Committees name="Historic Lok Sabha"  
+            <Committees name="Historic Lok Sabha"
+            src={LS}  
             more = "/committees/LS"
             description ="The Lok Sabha, India's vibrant parliament, stands out as a beacon amidst the turbulent winds of democracy, like a lighthouse guiding ships through stormy seas. Each elected member, a vivid brushstroke on the canvas of history, shaping the destiny of a nation like the conductor of a grand symphony, orchestrating harmony amidst diverse melodies.
 
@@ -105,7 +109,8 @@ export default function page (){
              />
             
             <Committees 
-            name="The Joint Crisis Committee: Sovetsky"  
+            name="The Joint Crisis Committee: Sovetsky"
+            src = {JCCS}  
             more = "/committees/JCCS"
             description = {`"The Soviets were like a formidable shield, a steel phalanx bound by the oath of Marxist-Leninist ideology. They stood as a majestic mountain range, impervious to the tempestuous winds of uncertainty, a beacon of solidarity in a turbulent sea of global geopolitics, guarding the shores of democracy. Their aspirations of preaching their ideas harvested by the blooded sickle and forged by the mighty hammer. But on the pathway of this vision coming to life stood the greatest roadblock, The entire Western Hemisphere stood against them. Will they be able to rise from the ashes of adversity?"`}/>
             
