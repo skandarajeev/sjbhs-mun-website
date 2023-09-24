@@ -8,10 +8,7 @@ import Eventlogo from "./media/event-logo.svg";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
 
-
-import {
-  motion
-} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Event = (details) => {
   return (
@@ -43,17 +40,15 @@ const Event = (details) => {
   );
 };
 
-
-
 export default function Home() {
-  var countDownDate = new Date("Oct 23, 2023 09:00:00").getTime();
-  var now = new Date().getTime();
-  var timeleft = countDownDate - now;
-
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  if (timeleft < 0) {
+  var deadline = new Date("October 25, 2023 09:00:00").getTime();
+  let now = new Date().getTime();
+  let t = deadline - now;
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((t % (1000 * 60)) / 1000);
+  if (t < 0) {
     days = 0;
     hours = 0;
     minutes = 0;
@@ -68,7 +63,6 @@ export default function Home() {
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet"
       ></link>
-
 
       {/* HERO SECTION! */}
 
@@ -141,10 +135,10 @@ export default function Home() {
             {days}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {minutes}
+            {hours}
           </p>
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {hours}
+            {minutes}
           </p>
         </div>
 
@@ -159,11 +153,8 @@ export default function Home() {
 
       {/* Committees Reveal section */}
 
-      <div className=" flex flex-col gap-3 headingText  mx-2 ">
-
-      </div>
+      <div className=" flex flex-col gap-3 headingText  mx-2 "></div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
-
         <div className="flex flex-wrap justify-around">
           <Event name="JCC: Atlantic" link="/committees/JCCA" />
           <Event name="JCC: Sovetsky" link="/committees/JCCS" />
@@ -172,22 +163,21 @@ export default function Home() {
           <Event name="UNSC" link="/committees/UNSC" />
           <Event name="SOCHUM" link="/committees/SOCHUM" />
           <Event name="TCC" link="/committees/TCC" />
-          <Event name="BBMP" link="/committees/BBMP" />
-          <Event name="Gram Panchayat" link="/committees/GP" />
-
         </div>
       </div>
       <div className="md:mt-0 mt-40">
-        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">LETTER FROM SECRETARY GENERAL</h1>
+        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">
+          LETTER FROM SECRETARY GENERAL
+        </h1>
 
         <div className=" grid md:grid-cols-2 p-[2.5rem]">
-
-          <Image src={alden} className=" flex justify-center w-[100vw] p-[1rem]" />
+          <Image
+            src={alden}
+            className=" flex justify-center w-[100vw] p-[1rem]"
+          />
           <Tab className="h-[100%]" />
         </div>
       </div>
-
-     
     </>
   );
 }
