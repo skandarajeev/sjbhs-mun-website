@@ -18,7 +18,7 @@ const Contact = () => {
                 SJBHSMUN is not just an ordinary Model United Nations conference. It is a platform where students will delve into pressing global issues, representing various nations, and working collaboratively to find innovative solutions.
 
                 </p>
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div className="mb-8 flex w-full max-w-[370px] md:hidden">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
                       width={24}
@@ -84,7 +84,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
+            {/* <div className="w-full px-4 lg:w-1/2 xl:w-5/12 ">
               <div className="relative p-8 bg-white rounded-lg shadow-lg sm:p-12">
                 <form>
                   <ContactInputBox
@@ -926,7 +926,7 @@ const Contact = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
