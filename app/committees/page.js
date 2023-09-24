@@ -121,9 +121,9 @@ export default function page (){
             description ="The Atlantic countries were like celestial constellations in the tumultuous night sky of the Cold War, each star a nation bound to the liberal banner of capitalism. United by ideology, they formed a cosmic alliance, casting shadows of intrigue and power across the geopolitical landscape, while navigating the perilous cosmic void of international politics.  Together, they visioned to paint a canvas of global confrontation, a dramatic theatre of superpower rivalry, where they emerged superior. However, will they succeed in defying the storm’s fury to conquer the relentless tides of adversity.  "
             />
             
-            <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP}  more = "/committees/BBMP"/>
+            {/* <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP}  more = "/committees/BBMP"/>
             
-            <Committees name="GRAM PANCHAYAT" src={BBMP}  more = "/committees/BBMP"/>
+            <Committees name="GRAM PANCHAYAT" src={BBMP}  more = "/committees/BBMP"/> */}
         </div>
     );
 }

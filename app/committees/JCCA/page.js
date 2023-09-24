@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import img from "../../media/alden.jpg";
+import img from "../../media/JCCA.jpg";
 import Image from "next/image";
 import questiomark from "../../media/questionMark.jpg"
 
@@ -36,8 +36,9 @@ export default function GA() {
         {/* right */}
         <div className="grid grid-cols-1 gap-3  ">
           <div
-            className={`${styles.big} flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
+            className={` flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
           >
+            <Image src={img}  layout="responsive" className="md:p-[2rem] rounded-[2rem] "></Image>
 
           </div>
           <div className="grid grid-cols-1 gap-3">
@@ -56,6 +57,8 @@ export default function GA() {
 
 
       {/* EB INFO */}
+      <p className={`${styles.mungradient} flex justify-center mb-[2rem] text-[2rem] font-semibold`}>EXECUTIVE BOARD</p>
+
       <div className="grid grid-cols-1 md:grid-cols-4 place-items-center mt-7 gap-5 md:px-4">
         {/* 1 */}
         <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-[#1E1D1D] dark:border-gray-700">

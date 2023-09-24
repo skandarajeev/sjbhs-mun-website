@@ -7,11 +7,12 @@ import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
-
-
+import { Inter } from 'next/font/google'
 import {
   motion
 } from "framer-motion";
+
+
 
 const Event = (details) => {
   return (
@@ -130,29 +131,34 @@ export default function Home() {
           OCTOBER
         </p>
 
-        <div className="flex m-auto gap-[3rem] mb-2">
-          <p className="font-poppins text-white ">23rd</p>
-          <p className="font-poppins text-white">24th</p>
-          <p className="font-poppins text-white">25th</p>
+        <div className="flex m-auto gap-[3rem] mb-2 text-center">
+          <p className="font-poppins text-white ">26th</p>
+          <p className="font-poppins text-white">27th</p>
+          <p className="font-poppins text-white">28th</p>
         </div>
 
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {days}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {minutes}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {hours}
-          </p>
-        </div>
+        <div className="grid grid-cols-1 grid-rows-1 items-center">
+          <div className="flex gap-[3rem] m-auto mb-2">
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+              {days}
+            </p>
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+              {minutes}
+            </p>
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+              {hours}
+            </p>
+          </div>
 
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins text-white">Days</p>
-          <p className="font-poppins text-white">Hours</p>
-          <p className="font-poppins text-white">Minutes</p>
+          <div className="flex gap-[3rem] m-auto mb-2 text-center">
+            <p className="font-poppins text-white">Days</p>
+            <p className="font-poppins text-white ">Hours</p>
+            <p className="font-poppins text-white">Minutes</p>
+          </div>
         </div>
+       
+
+     
       </motion.div>
 
       {/* DATE REVEAL END */}
@@ -165,15 +171,14 @@ export default function Home() {
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
 
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC: Atlantic" link="/committees/JCCA" />
-          <Event name="JCC: Sovetsky" link="/committees/JCCS" />
+          <Event name="JCC - Atlantic" link="/committees/JCCA" />
+          <Event name="JCC - Sovetsky" link="/committees/JCCS" />
           <Event name="LOK SABHA" link="/committees/LS" />
           <Event name="ILO" link="/committees/ILO" />
           <Event name="UNSC" link="/committees/UNSC" />
           <Event name="SOCHUM" link="/committees/SOCHUM" />
           <Event name="TCC" link="/committees/TCC" />
-          <Event name="BBMP" link="/committees/BBMP" />
-          <Event name="Gram Panchayat" link="/committees/GP" />
+          
 
         </div>
       </div>
