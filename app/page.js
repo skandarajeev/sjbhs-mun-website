@@ -37,7 +37,7 @@ const Event = (details) => {
           className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-            <Image className={`w-auto  md:mb-8  mb-5 h-32 md:h-56 `} src={details.src} />
+            <Image className={`w-auto  md:mb-8  mb-5 h-24 sm:h-32 lg:h-44 `} src={details.src} />
 
             <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
               {details.name}
