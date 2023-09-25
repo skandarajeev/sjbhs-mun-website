@@ -7,6 +7,14 @@ import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
+import ILO from "./media/FINAL_ILO.svg?url"
+import SOCHUM from "./media/FINAL_SOCHUM.svg?url"
+import TCC from "./media/FINAL_TCC.svg?url"
+import BBMP from "./media/FINAL_BBMP.svg?url"
+import LS from "./media/FINAL_LS.svg?url"
+import JCCS from "./media/FINAL_JCCS.svg?url"
+import JCCA from "./media/FINAL_JCCA.svg?url"
+import UNSC from "./media/FINAL_UNSC.svg?url"
 
 import { motion } from "framer-motion";
 
@@ -29,7 +37,8 @@ const Event = (details) => {
           className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-            <Eventlogo className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" />
+            <Image className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" src={details.src} height={100} width={100} />
+
             <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
               {details.name}
             </p>
@@ -156,13 +165,13 @@ export default function Home() {
       <div className=" flex flex-col gap-3 headingText  mx-2 "></div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC: Atlantic" link="/committees/JCCA" />
-          <Event name="JCC: Sovetsky" link="/committees/JCCS" />
-          <Event name="LOK SABHA" link="/committees/LS" />
-          <Event name="ILO" link="/committees/ILO" />
-          <Event name="UNSC" link="/committees/UNSC" />
-          <Event name="SOCHUM" link="/committees/SOCHUM" />
-          <Event name="TCC" link="/committees/TCC" />
+          <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} />
+          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} />
+          <Event name="LOK SABHA" link="/committees/LS" src={LS} />
+          <Event name="ILO" link="/committees/ILO" src={ILO} />
+          <Event name="UNSC" link="/committees/UNSC" src={UNSC} />
+          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} />
+          <Event name="TCC" link="/committees/TCC" src={TCC} />
         </div>
       </div>
       <div className="md:mt-0 mt-40">
