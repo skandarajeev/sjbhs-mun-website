@@ -37,7 +37,7 @@ const Event = (details) => {
           className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-            <Image className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" src={details.src} height={100} width={100} />
+            <Image className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" src={details.src} height={4000} width={100} />
 
             <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
               {details.name}
@@ -149,12 +149,18 @@ export default function Home() {
           <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
             {minutes}
           </p>
+          {/* <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
+            {seconds}
+          </p> */}
         </div>
 
         <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins text-white">Days</p>
+          <p className="font-poppins text-white ">Days</p>
           <p className="font-poppins text-white">Hours</p>
           <p className="font-poppins text-white">Minutes</p>
+          {/* <p className="font-poppins text-white">Seconds</p> */}
+
+
         </div>
       </motion.div>
 
@@ -165,12 +171,12 @@ export default function Home() {
       <div className=" flex flex-col gap-3 headingText  mx-2 "></div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} />
-          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} />
-          <Event name="LOK SABHA" link="/committees/LS" src={LS} />
-          <Event name="ILO" link="/committees/ILO" src={ILO} />
-          <Event name="UNSC" link="/committees/UNSC" src={UNSC} />
-          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} />
+          <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} value="100" />
+          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} value="100" />
+          <Event name="LOK SABHA" link="/committees/LS" src={LS} value="200" />
+          <Event name="ILO" link="/committees/ILO" src={ILO} value="100" />
+          <Event name="UNSC" link="/committees/UNSC" src={UNSC} value="100" />
+          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value="100" />
           <Event name="TCC" link="/committees/TCC" src={TCC} />
         </div>
       </div>

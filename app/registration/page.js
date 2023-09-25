@@ -25,7 +25,7 @@ export default function page() {
                 <span class="mr-2 text-5xl font-extrabold">₹1299</span>
               </div>
 
-              <ul role="list" class="mb-8 space-y-4 text-left">
+              <ul role="list" class="mb-10 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
                   <span>Not Eligible for Best Delegation Price</span>
                 </li>
@@ -39,12 +39,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <a
-                  href="/registration/individual"
+                <p
+                  // href="/registration/individual"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  "
                 >
-                  REGISTER
-                </a>
+                  OPENING SOON
+                </p>
               </div>
             </div>
 
@@ -60,7 +60,7 @@ export default function page() {
                 </span>
               </div>
 
-              <ul role="list" class="mb-8 space-y-4 text-left">
+              <ul role="list" class="mb-12 space-y-4  text-left">
                 <li class="flex items-center space-x-3">
                   <span>Eligible for Best Delegation</span>
                 </li>
@@ -72,12 +72,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <a
+                <p
                   href="/registration/delegation"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
                 >
-                  REGISTER
-                </a>
+                  OPENING SOON
+                </p>
               </div>
             </div>
           </div>
