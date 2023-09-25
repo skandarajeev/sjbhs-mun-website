@@ -134,28 +134,44 @@ export default function Home() {
         </p>
 
         <div className="flex m-auto gap-[3rem] mb-2">
-          <p className="font-poppins text-white ">23rd</p>
-          <p className="font-poppins text-white">24th</p>
-          <p className="font-poppins text-white">25th</p>
+          <p className="font-poppins text-[1.2rem] text-white ">26th</p>
+          <p className="font-poppins text-[1.2rem] text-white">27th</p>
+          <p className="font-poppins text-[1.2rem] text-white">28th</p>
         </div>
 
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {days}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {hours}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {minutes}
-          </p>
-        </div>
+        
+          <div className="flex gap-[3rem] m-auto mb-2">
+            <div>
+              <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+                {days}
+              </p>
+              <p className="font-poppins text-white ">Days</p>
 
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins text-white">Days</p>
-          <p className="font-poppins text-white">Hours</p>
-          <p className="font-poppins text-white">Minutes</p>
-        </div>
+            </div>
+
+            <div>
+              <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+                {hours}
+              </p>
+              <p className="font-poppins text-white">Hours</p>
+
+            </div>
+            
+
+            <div>
+              <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+                {minutes}
+              </p>
+              <p className="font-poppins text-white">Minutes</p>
+
+            </div>
+           
+          </div>
+
+            
+          
+        
+        
       </motion.div>
 
       {/* DATE REVEAL END */}
