@@ -233,7 +233,7 @@ export function Footeri() {
           </div>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <p className="text-sm text-gray-500 sm:text-center dark:text-gray-400">Website Developed by Skanda Rajeev || Pratheek Ravikumar</p>
+        <p className="text-sm text-gray-500 text-center dark:text-gray-400">Website Developed by <span className="mun-gradient font-bold">Skanda Rajeev || Pratheek Ravikumar</span></p>
       </div>
     </footer>
   );
