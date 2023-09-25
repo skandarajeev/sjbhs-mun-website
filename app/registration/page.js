@@ -31,11 +31,14 @@ export default function page() {
                 </li>
                 <li class="flex items-center space-x-3">
                   <span>
-                    Security Council is a double delegation committee,
+                    Security Council is double delegation
                   </span>
                 </li>
                 <li class="flex items-center space-x-3">
-                  <span> only one of the delegate should register</span>
+                  <span> committee, only one of the delegate </span>
+                </li>
+                <li class="flex items-center space-x-3">
+                  <span> should register </span>
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">

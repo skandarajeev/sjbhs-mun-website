@@ -4,13 +4,12 @@ import style from "./styles.css";
 import logo from "./media/MUN LOGO.png";
 import alden from "../app/media/alden.jpg";
 import circle from "./media/Ellipse 1.svg?url";
-import Eventlogo from "./media/event-logo.svg";
+import Eventlogo from "./media/event-logo.svg?url";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
 import ILO from "./media/FINAL_ILO.svg?url"
 import SOCHUM from "./media/FINAL_SOCHUM.svg?url"
 import TCC from "./media/FINAL_TCC.svg?url"
-import BBMP from "./media/FINAL_BBMP.svg?url"
 import LS from "./media/FINAL_LS.svg?url"
 import JCCS from "./media/FINAL_JCCS.svg?url"
 import JCCA from "./media/FINAL_JCCA.svg?url"
@@ -195,7 +194,7 @@ export default function Home() {
           LETTER FROM SECRETARY GENERAL
         </h1>
         <h2 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[3vw] md:text-[4vw] font-bold mt-6">
-          Alden D'Souza
+          {`Alden D'Souza`}
         </h2>
         <div className=" grid md:grid-cols-2 p-[2.5rem]">
           <Image
