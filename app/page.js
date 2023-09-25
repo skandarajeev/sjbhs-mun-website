@@ -18,6 +18,8 @@ import UNSC from "./media/FINAL_UNSC.svg?url"
 
 import { motion } from "framer-motion";
 
+
+
 const Event = (details) => {
   return (
     <Link href={details.link}>
@@ -188,6 +190,15 @@ export default function Home() {
           <Event name="UNSC" link="/committees/UNSC" src={UNSC} value = "70%" mvalue = "100%"/>
           <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value = "70%" mvalue = "100%"/>
           <Event name="TCC" link="/committees/TCC" src={TCC}value = "70%" mvalue = "100%" />
+          <Event name="JCC - Atlantic" link="/committees/JCCA" />
+          <Event name="JCC - Sovetsky" link="/committees/JCCS" />
+          <Event name="LOK SABHA" link="/committees/LS" />
+          <Event name="ILO" link="/committees/ILO" />
+          <Event name="UNSC" link="/committees/UNSC" />
+          <Event name="SOCHUM" link="/committees/SOCHUM" />
+          <Event name="TCC" link="/committees/TCC" />
+          
+
         </div>
       </div>
       <div className="md:mt-0 mt-40">
