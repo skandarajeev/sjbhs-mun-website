@@ -175,16 +175,20 @@ export default function Home() {
         </div>
       </div>
       <div className="md:mt-0 mt-40">
-        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">
+        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[4vw] md:text-[5vw] font-bold">
           LETTER FROM SECRETARY GENERAL
         </h1>
-
+        <h2 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[3vw] md:text-[4vw] font-bold mt-6">
+          Alden D'Souza
+        </h2>
         <div className=" grid md:grid-cols-2 p-[2.5rem]">
           <Image
             src={alden}
             className=" flex justify-center w-[100vw] p-[1rem]"
           />
           <Tab className="h-[100%]" />
+
+         
         </div>
       </div>
     </>

@@ -10,13 +10,13 @@ const allIngredients = [
     content:
       <div>
         <h1 className="font-medium mb-[10px]">Dear delegates and faculty advisors,</h1>
-        <p className="mb-[10px]">It is my very great pleasure to invite you to the 11th edition of the St. Joseph&aposs Boys&apos High School Model United Nations.
+        <p className="mb-[10px]">It is my very great pleasure to invite you to the 11th edition of the St. Joseph's Boys' High School Model United Nations.
 
-          SJBHSMUN has earned a distinguished reputation for fostering effective discourse, critical thinking, and diplomacy among the world&aposs future leaders. As we prepare to embark on yet another unforgettable journey of diplomacy and debate, I want to share with you the essence of our MUN conference and the venerable institution that hosts
+          SJBHSMUN has earned a distinguished reputation for fostering effective discourse, critical thinking, and diplomacy among the world's future leaders. As we prepare to embark on yet another unforgettable journey of diplomacy and debate, I want to share with you the essence of our MUN conference and the venerable institution that hosts
 
           When you choose to participate in SJBHSMUN, you are not just attending another conference, you are joining a tradition of excellence. Our conference is a platform where students from diverse backgrounds and cultures come together to discuss, debate, and resolve global issues. It is an opportunity to engage in discourse and develop essential skills such as negotiation, public speaking, and critical thinking.
 
-          At SJBHSMUN this year, we offer to you meticulously crafted committees to provide a challenging and immersive experience. You will find yourself in the shoes of diplomats, tackling real-world problems, and seeking solutions through diplomacy and compromise. This is not just a simulation; it&aposs a chance to develop a deeper understanding of global affairs and international relations.
+          At SJBHSMUN this year, we offer to you meticulously crafted committees to provide a challenging and immersive experience. You will find yourself in the shoes of diplomats, tackling real-world problems, and seeking solutions through diplomacy and compromise. This is not just a simulation; it's a chance to develop a deeper understanding of global affairs and international relations.
 
           I fondly remember my own time at SJBHS and how it shaped my individuality. The friendships formed, the knowledge gained, and the unforgettable memories created during those conferences have had a profound impact on my life. It is my hope that you too will have similar experiences and take away valuable lessons that will serve you well in your future
         </p>
@@ -25,16 +25,16 @@ const allIngredients = [
         </h2>
       </div>
   },
-  { icon: "", label: "", content: "Boom!" },
-  {
-    icon: "",
-    label: "",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lectus eu libero maximus aliquam. Fusce suscipit semper nulla, quis finibus mi vestibulum non. Praesent nec bibendum odio. Sed interdum diam nec quam fringilla, ac tristique arcu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In tincidunt malesuada libero vel interdum. Vestibulum volutpat viverra lacus a tincidunt. Quisque suscipit lorem vel leo aliquam, id faucibus tellus lobortis. Vivamus et dolor sed justo pharetra convallis a ut ligula. Suspendisse fringilla ullamcorper mauris, id scelerisque velit. Proin eget velit vel arcu elementum convallis non vel erat. Aenean in purus et tellus ultricies pulvinar. Sed dapibus nunc nec dictum fermentum."
-  },
-  { icon: "🥕", label: "Carrot" },
-  { icon: "🍌", label: "Banana" },
-  { icon: "🫐", label: "Blueberries" },
-  { icon: "🥂", label: "Champers?" }
+  // { icon: "", label: "", content: "Boom!" },
+  // {
+  //   icon: "",
+  //   label: "",
+  //   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lectus eu libero maximus aliquam. Fusce suscipit semper nulla, quis finibus mi vestibulum non. Praesent nec bibendum odio. Sed interdum diam nec quam fringilla, ac tristique arcu dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In tincidunt malesuada libero vel interdum. Vestibulum volutpat viverra lacus a tincidunt. Quisque suscipit lorem vel leo aliquam, id faucibus tellus lobortis. Vivamus et dolor sed justo pharetra convallis a ut ligula. Suspendisse fringilla ullamcorper mauris, id scelerisque velit. Proin eget velit vel arcu elementum convallis non vel erat. Aenean in purus et tellus ultricies pulvinar. Sed dapibus nunc nec dictum fermentum."
+  // },
+  // { icon: "🥕", label: "Carrot" },
+  // { icon: "🍌", label: "Banana" },
+  // { icon: "🫐", label: "Blueberries" },
+  // { icon: "🥂", label: "Champers?" }
 ]
 
 const [tomato, lettuce, cheese] = allIngredients
@@ -52,22 +52,23 @@ export default function Tab() {
 
   return (
     <div className={`${style.window} w-[100%] md:w-[100%] shadow-lg shadow-orange-500`}>
-      <nav className={style.nav}>
-        <ul className={style.ul}>
-          {tabs.map(item => (
-            <li
-              key={item.label}
+      {/* <nav className={style.nav}>
+        <ul className={style.ul}> */}
+          {/* {tabs.map(item => ( */}
+            {/* <li
+              key={allIngredients.label}
               className={style.ul}
               onClick={() => setSelectedTab(item)}
-            >
-              {`${item.icon} ${item.label}`}
-              {item === selectedTab ? (
+            > */}
+              {/* {`${allIngredients.label}`} */}
+              
+              {/* {item === selectedTab ? (
                 <motion.div className="underline" layoutId="underline" />
-              ) : null}
-            </li>
-          ))}
-        </ul>
-      </nav>
+              ) : null} */}
+            {/* </li> */}
+          {/* ))} */}
+        {/* </ul>
+      </nav> */}
       <main className={style.main}>
         <AnimatePresence mode="wait">
           <motion.div
