@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import img from "../../media/alden.jpg";
+import img from "../../media/LS.png";
 import Image from "next/image";
 import questiomark from "../../media/questionMark.jpg"
 
@@ -40,8 +40,9 @@ export default function GA() {
         {/* right */}
         <div className="grid grid-cols-1 gap-3  ">
           <div
-            className={`${styles.big} flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
+            className={` flex  justify-center items-center h-[50vh] w-[100vw] md:w-[50vw] rounded-xl`}
           >
+            <Image src={img} layout="responsiveness"></Image>
 
           </div>
           <div className="grid grid-cols-1 gap-3">

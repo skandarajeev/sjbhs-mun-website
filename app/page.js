@@ -37,7 +37,7 @@ const Event = (details) => {
           className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-            <Image className="sm:w-[70%] w-[100%] r md:mb-8  mb-5 h-auto" src={details.src} height={4000} width={100} />
+            <Image className={`w-auto  md:mb-8  mb-5 h-32 md:h-56 `} src={details.src} />
 
             <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
               {details.name}
@@ -134,34 +134,44 @@ export default function Home() {
         </p>
 
         <div className="flex m-auto gap-[3rem] mb-2">
-          <p className="font-poppins text-white ">23rd</p>
-          <p className="font-poppins text-white">24th</p>
-          <p className="font-poppins text-white">25th</p>
+          <p className="font-poppins text-[1.2rem] text-white ">26th</p>
+          <p className="font-poppins text-[1.2rem] text-white">27th</p>
+          <p className="font-poppins text-[1.2rem] text-white">28th</p>
         </div>
+
 
         <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {days}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {hours}
-          </p>
-          <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {minutes}
-          </p>
-          {/* <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold">
-            {seconds}
-          </p> */}
+          <div>
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+              {days}
+            </p>
+            <p className="font-poppins text-white ">Days</p>
+
+          </div>
+
+          <div>
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+              {hours}
+            </p>
+            <p className="font-poppins text-white">Hours</p>
+
+          </div>
+
+
+          <div>
+            <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
+              {minutes}
+            </p>
+            <p className="font-poppins text-white">Minutes</p>
+
+          </div>
+
         </div>
 
-        <div className="flex gap-[3rem] m-auto mb-2">
-          <p className="font-poppins text-white ">Days</p>
-          <p className="font-poppins text-white">Hours</p>
-          <p className="font-poppins text-white">Minutes</p>
-          {/* <p className="font-poppins text-white">Seconds</p> */}
 
 
-        </div>
+
+
       </motion.div>
 
       {/* DATE REVEAL END */}
@@ -171,26 +181,30 @@ export default function Home() {
       <div className=" flex flex-col gap-3 headingText  mx-2 "></div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} value="100" />
-          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} value="100" />
-          <Event name="LOK SABHA" link="/committees/LS" src={LS} value="200" />
-          <Event name="ILO" link="/committees/ILO" src={ILO} value="100" />
-          <Event name="UNSC" link="/committees/UNSC" src={UNSC} value="100" />
-          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value="100" />
-          <Event name="TCC" link="/committees/TCC" src={TCC} />
+          <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} value="70%" mvalue="100%" />
+          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} value="70%" mvalue="100%" />
+          <Event name="LOK SABHA" link="/committees/LS" src={LS} value="60vw" mvalue="102%" />
+          <Event name="ILO" link="/committees/ILO" src={ILO} value="70%" mvalue="95%" />
+          <Event name="UNSC" link="/committees/UNSC" src={UNSC} value="70%" mvalue="100%" />
+          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value="70%" mvalue="100%" />
+          <Event name="TCC" link="/committees/TCC" src={TCC} value="70%" mvalue="100%" />
         </div>
       </div>
       <div className="md:mt-0 mt-40">
-        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[9vw] lg:text-[4vw] md:text-[5vw] font-bold">
+        <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[4vw] md:text-[5vw] font-bold">
           LETTER FROM SECRETARY GENERAL
         </h1>
-
+        <h2 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[3vw] md:text-[4vw] font-bold mt-6">
+          Alden D'Souza
+        </h2>
         <div className=" grid md:grid-cols-2 p-[2.5rem]">
           <Image
             src={alden}
             className=" flex justify-center w-[100vw] p-[1rem]"
           />
           <Tab className="h-[100%]" />
+
+
         </div>
       </div>
     </>
