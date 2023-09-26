@@ -54,20 +54,20 @@ export default function Tab() {
     <div className={`${style.window} w-[100%] md:w-[100%] shadow-lg shadow-orange-500`}>
       {/* <nav className={style.nav}>
         <ul className={style.ul}> */}
-          {/* {tabs.map(item => ( */}
-            {/* <li
+      {/* {tabs.map(item => ( */}
+      {/* <li
               key={allIngredients.label}
               className={style.ul}
               onClick={() => setSelectedTab(item)}
             > */}
-              {/* {`${allIngredients.label}`} */}
-              
-              {/* {item === selectedTab ? (
+      {/* {`${allIngredients.label}`} */}
+
+      {/* {item === selectedTab ? (
                 <motion.div className="underline" layoutId="underline" />
               ) : null} */}
-            {/* </li> */}
-          {/* ))} */}
-        {/* </ul>
+      {/* </li> */}
+      {/* ))} */}
+      {/* </ul>
       </nav> */}
       <main className={style.main}>
         <AnimatePresence mode="wait">
