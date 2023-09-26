@@ -73,7 +73,7 @@ export default function page() {
                 Speaking up in a world where there penetrates a constant fear of uncertainty, ILO gives voice to their concerns and upholds their rights, which would otherwise find themselves in the shambles. 
                 The books of history are etched with the agony and dilemma that the labour force has always been put through, however, there is a sense of beaming hope that can terminate this prolonged struggle, the opportunity to rewrite history, the chance to equip the deprived. A hope that has manifested as the ILO." className="" />
 
-            <Committees name="Social ,Cultural, and Humanitarian Committee"
+            <Committees name="Social Cultural and Humanitarian Committee"
                 src={SOCHUM}
                 more="/committees/SOCHUM"
                 description="In the current global landscape, constitutes a wrenching scenario where the very aspect of human, social and cultural rights of many are relinquished and a major chunk of the world is racking in the pain of pressing and concerning situations. 

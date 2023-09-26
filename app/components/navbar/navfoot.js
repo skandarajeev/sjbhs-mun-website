@@ -142,17 +142,32 @@ export function Footeri() {
             </div>
             <div>
               <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Sponsors
+                Check Out
               </h2>
               <ul class="text-gray-500 dark:text-gray-400 font-medium">
                 <li class="mb-4">
-                  <a href="#" class="hover:underline">
-                    {`Skanda Rajeev's Mother`}
+                  <a href="/" class="hover:underline">
+                    {`Home`}
                   </a>
                 </li>
-                <li>
-                  <a href="#" class="hover:underline">
-                    {`Pirates Bay`}
+                <li class="mb-4">
+                  <a href="/about" class="hover:underline">
+                    {`About`}
+                  </a>
+                </li>
+                <li  className="mb-4">
+                  <a href="/committees" class="hover:underline">
+                    {`Committees`}
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/contact" class="hover:underline">
+                    {`Contact`}
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/policy" class="hover:underline">
+                    {`Policy`}
                   </a>
                 </li>
               </ul>
