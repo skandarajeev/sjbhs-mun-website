@@ -3,10 +3,10 @@ import React from "react";
 const Contact = () => {
   return (
     <>
-      <section className="bg-transperent text-white p-[2rem] py-20 lg:py-[120px] overflow-hidden relative z-10">
+      <section className="bg-transperent text-white p-[2rem] py-20 lg:py-[120px] overflow-hidden relative z-10 items-center">
         <div className="container">
-          <div className="flex flex-wrap -mx-4 lg:justify-between">
-            <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
+          <div className=" -mx-4 lg:justify-between">
+            <div className=" flex justify-center w-full px-4 ">
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 <span className="block mb-4 text-base font-semibold text-primary">
                   Contact Us

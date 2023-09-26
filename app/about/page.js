@@ -8,10 +8,15 @@ import gavel from "../media/gavel-solid.svg"
 import Image from "next/image";
 import mark from '../media/questionMark.jpg'
 import { Inconsolata } from 'next/font/google'
-
+import { Fuggles } from "next/font/google";
 
  
 const inconsolata = Inconsolata({ 
+  subsets: ['latin'],
+  weight : '400',
+})
+
+const fuggles = Fuggles({ 
   subsets: ['latin'],
   weight : '400',
 })
@@ -85,8 +90,17 @@ export default function page() {
 
       </div>
      
-       
-
+       <div className={`mb-[1rem] font-${fuggles.style.fontFamily}`}>
+        <p className="flex justify-center text-white mun-gradient font-bold text-[3.3vw] md:text-[2.5vw] lg:text-[2vw] leading-[3rem]">To be the change, the one that soars;
+            <br/>
+            In a world of crimes and wars,
+            <br/>
+            Do you have the capability to make the power yours?
+            <br/>
+            Presenting to you, SJBHSMUN 2023.
+        </p>
+       </div>
+        
 
       {/* - -END OF MAIN DIV - - */}
     </div>

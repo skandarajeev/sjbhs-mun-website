@@ -17,6 +17,15 @@ import JCCA from "./media/FINAL_JCCA.svg?url"
 import UNSC from "./media/FINAL_UNSC.svg?url"
 
 import { motion } from "framer-motion";
+import { Open_Sans } from 'next/font/google'
+
+
+ 
+const open_sans = Open_Sans({ 
+  subsets: ['latin'],
+  weight : '400',
+})
+
 
 
 
@@ -67,6 +76,12 @@ export default function Home() {
 
   return (
     <>
+     <style jsx global>{`
+        html {
+          font-family: ${open_sans.style.fontFamily};
+        }
+      `}</style>
+
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -190,15 +205,6 @@ export default function Home() {
           <Event name="UNSC" link="/committees/UNSC" src={UNSC} value = "70%" mvalue = "100%"/>
           <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value = "70%" mvalue = "100%"/>
           <Event name="TCC" link="/committees/TCC" src={TCC}value = "70%" mvalue = "100%" />
-          <Event name="JCC - Atlantic" link="/committees/JCCA" />
-          <Event name="JCC - Sovetsky" link="/committees/JCCS" />
-          <Event name="LOK SABHA" link="/committees/LS" />
-          <Event name="ILO" link="/committees/ILO" />
-          <Event name="UNSC" link="/committees/UNSC" />
-          <Event name="SOCHUM" link="/committees/SOCHUM" />
-          <Event name="TCC" link="/committees/TCC" />
-          
-
         </div>
       </div>
       <div className="md:mt-0 mt-40">
