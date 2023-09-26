@@ -3,13 +3,93 @@
 import { Herr_Von_Muellerhoff } from "next/font/google";
 import { styles } from "./components.css";
 export function Indiregister() {
+  const makePayment = async (info) => {
+    console.log("here...");
+    const res = await initializeRazorpay();
+
+    if (!res) {
+      alert("Razorpay SDK Failed to load");
+      return;
+    }
+    console.log("time to fetch")
+    // Make API call to the serverless API
+    const data = await fetch("http://localhost:4000/indipay", { method: "POST" }).then((t) =>
+      t.json()
+    );
+    console.log(data);
+    var options = {
+      key: process.env.RAZORPAY_KEY, // Enter the Key ID generated from the Dashboard
+      name: `St Joseph's Boys' Highschool`,
+      currency: data.currency,
+      amount: data.amount,
+      order_id: data.id,
+      description: "SJBHS MUN",
+      image: "../media/MUN LOGO.png",
+      handler: async function (response) {
+        // Validate payment at server - using webhooks is a better idea.
+        alert(response.razorpay_payment_id);
+        alert(response.razorpay_order_id);
+        alert(response.razorpay_signature)
+        info.order_id = response.razorpay_order_id;
+        info.payment_id = response.razorpay_payment_id;
+        info.razorpay_signature = response.razorpay_signature;
+
+        const JSONdata = JSON.stringify(info);
+
+        // API endpoint where we send htmlForm data.
+        const endpoint = "http://localhost:4000/individual ";
+
+        const options = {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSONdata,
+        };
+
+        // Send the htmlForm data to our htmlForms API on Vercel and get a response.
+        const result = await fetch(endpoint, options);
+        alert(`The Result is a ${result.data}`);
+
+      },
+      prefill: {
+        name: "",
+        email: "   ",
+        contact: " ",
+      },
+      theme: {
+        color: "#000000"
+      }
+
+
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  };
+  const initializeRazorpay = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      // document.body.appendChild(script);
+
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+
+      document.body.appendChild(script);
+    });
+  };
+
   const handleSubmit = async (event) => {
     console.log("On it ");
 
     // Stop the htmlForm from submitting and refreshing the page.
     event.preventDefault();
-
-    // Get data from the htmlForm.
     const data = {
       name: event.target.first_name.value + " " + event.target.last_name.value,
       institution: event.target.institution.value,
@@ -23,25 +103,13 @@ export function Indiregister() {
       comittee: event.target.comittee.value,
     };
 
-    const JSONdata = JSON.stringify(data);
+    makePayment(data);
 
-    // API endpoint where we send htmlForm data.
-    const endpoint = "http://localhost:4000/send ";
+    // Get data from the htmlForm.
 
-    const options = {
-      method: "POST",
-
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSONdata,
-    };
-
-    // Send the htmlForm data to our htmlForms API on Vercel and get a response.
-    const response = await fetch(endpoint, options);
     // const result = await response.json();
-    // alert(`The Result is a ${result.data}`);
-  };
+
+  }
 
   return (
     <div className="flex flex-col justify-center items-center mt-11">
@@ -563,4 +631,4 @@ export const DelegationRegistration = () => {
       </button>
     </form>
   );
-};
+}
