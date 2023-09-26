@@ -3,32 +3,28 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
 import bodyParser from "body-parser";
 import cors from "cors";
-import crypto from "crypto"
+import crypto from "crypto";
 import Razorpay from "razorpay";
+import dotenv from "dotenv";
 
 import shortid from "shortid";
 
-
-
-
-
-
+dotenv.config();
 const firebaseConfig = {
-  apiKey: "AIzaSyAEwuAAdhtckVj7RmYXOkDNF3QL_EUdWp8",
-  authDomain: "mun-api-b2525.firebaseapp.com",
-  projectId: "mun-api-b2525",
-  storageBucket: "mun-api-b2525.appspot.com",
-  messagingSenderId: "259985561049",
-  appId: "1:259985561049:web:3efc827235706a157e75c8",
-  measurementId: "G-TPFH0YFCS3",
+  apiKey: process.env.FIREBASE_API,
+  authDomain: "sjbhsmun-2023.firebaseapp.com",
+  projectId: "sjbhsmun-2023",
+  storageBucket: "sjbhsmun-2023.appspot.com",
+  messagingSenderId: "325178861580",
+  appId: "1:325178861580:web:209c1d8d86f5ff7f2de629",
+  measurementId: "G-MHDL61NQEH",
 };
 
 const fireApp = initializeApp(firebaseConfig);
 const db = getFirestore(fireApp);
 const razorpay = new Razorpay({
-  key_id: " process.env.RAZORPAY_KEY",
-  key_secret: "iPYGivxQ0Hx9weMtE3BNI52X",
-
+  key_id: process.env.RAZORPAY_KEY,
+  key_secret: process.env.RAZORPAY_SECRET,
 });
 const app = express();
 app.use(bodyParser.json());
@@ -47,7 +43,7 @@ app.post("/indipay", async function (req, res) {
   if (req.method === "POST") {
     // Initialize razorpay object
 
-    console.log("Information Recieved")
+    console.log("Information Recieved");
 
     // Create an order -> generate the OrderID -> Send it to the Front-end
     const payment_capture = 1;
@@ -67,7 +63,7 @@ app.post("/indipay", async function (req, res) {
         currency: response.currency,
         amount: response.amount,
       });
-      console.log("Order Sent")
+      console.log("Order Sent");
     } catch (err) {
       console.log(err);
       res.status(400).json(err);
@@ -75,42 +71,38 @@ app.post("/indipay", async function (req, res) {
   } else {
     // Handle any other HTTP method
   }
-  //   try {
-  //     const docRef = await setDoc(
-  //       doc(db, req.body.comittee, req.body.name),
-  //       req.body
-  //     );
-  //     console.log(req.body);
-
-  //     res.send("Success");
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // });
+  //  ;
 });
 app.post("/individual", async function (req, res) {
   const { order_id, payment_id, razorpay_signature } = req.body;
 
-  let key_secret = "iPYGivxQ0Hx9weMtE3BNI52X"
+  let key_secret = process.env.RAZORPAY_SECRET;
 
   // STEP 8: Verification & Send Response to User
 
-  // Creating hmac object 
-  let hmac = crypto.createHmac('sha256', key_secret);
+  // Creating hmac object
+  let hmac = crypto.createHmac("sha256", key_secret);
 
   // Passing the data to be hashed
   hmac.update(order_id + "|" + payment_id);
 
   // Creating the hmac in the required format
-  const generated_signature = hmac.digest('hex');
-
+  const generated_signature = hmac.digest("hex");
 
   if (razorpay_signature === generated_signature) {
-    res.json({ success: true, message: "Payment has been verified" })
-    console.log("REAL REAL")
-  }
-  else
-    res.json({ success: false, message: "Payment verification failed" })
+    console.log("REAL REAL");
+    try {
+      const docRef = await setDoc(
+        doc(db, req.body.comittee, req.body.name),
+        req.body
+      );
+      console.log(req.body);
+
+      res.send("Success");
+    } catch (e) {
+      console.error(e);
+    }
+  } else res.json({ success: false, message: "Payment verification failed" });
 });
 
 app.post("/delegation", async function (req, res) {
