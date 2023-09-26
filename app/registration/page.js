@@ -42,12 +42,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <p
-                  // href="/registration/individual"
+                <a
+                  href="/registration/individual"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  "
                 >
                   OPENING SOON
-                </p>
+                </a>
               </div>
             </div>
 
@@ -63,8 +63,8 @@ export default function page() {
                 </span>
               </div>
 
-              <ul role="list" class="mb-12 space-y-4  text-left">
-                <li class="flex items-center space-x-3">
+              <ul role="list" class="  mb-12 space-y-4  text-left">
+                <li class="flex items-center space-x-3 list-disc">
                   <span>Eligible for Best Delegation</span>
                 </li>
                 <li class="flex items-center space-x-3">
@@ -75,12 +75,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <p
+                <a
                   href="/registration/delegation"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
                 >
                   OPENING SOON
-                </p>
+                </a>
               </div>
             </div>
           </div>

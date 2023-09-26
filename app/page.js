@@ -16,6 +16,17 @@ import JCCA from "./media/FINAL_JCCA.svg?url"
 import UNSC from "./media/FINAL_UNSC.svg?url"
 
 import { motion } from "framer-motion";
+import { Open_Sans } from 'next/font/google'
+
+
+ 
+const open_sans = Open_Sans({ 
+  subsets: ['latin'],
+  weight : '400',
+})
+
+
+
 
 const Event = (details) => {
   return (
@@ -64,6 +75,12 @@ export default function Home() {
 
   return (
     <>
+     <style jsx global>{`
+        html {
+          font-family: ${open_sans.style.fontFamily};
+        }
+      `}</style>
+
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}

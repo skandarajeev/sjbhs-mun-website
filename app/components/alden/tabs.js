@@ -18,8 +18,8 @@ const allIngredients = [
 
           At SJBHSMUN this year, we offer to you meticulously crafted committees to provide a challenging and immersive experience. You will find yourself in the shoes of diplomats, tackling real-world problems, and seeking solutions through diplomacy and compromise. This is not just a simulation; it's a chance to develop a deeper understanding of global affairs and international relations.
 
-          I fondly remember my own time at SJBHS and how it shaped my individuality. The friendships formed, the knowledge gained, and the unforgettable memories created during those conferences have had a profound impact on my life. It is my hope that you too will have similar experiences and take away valuable lessons that will serve you well in your future
-          `} </p>
+          I fondly remember my own time at SJBHS and how it shaped my individuality. The friendships formed, the knowledge gained, and the unforgettable memories created during those conferences have had a profound impact on my life. It is my hope that you too will have similar experiences and take away valuable lessons that will serve you well in your future`}
+        </p>
         <h2 className="font-medium">
           The Secretariat and I eagerly await your presence at #27 Museum Road in October!
         </h2>

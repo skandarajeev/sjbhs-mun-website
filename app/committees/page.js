@@ -73,7 +73,7 @@ export default function page() {
                 Speaking up in a world where there penetrates a constant fear of uncertainty, ILO gives voice to their concerns and upholds their rights, which would otherwise find themselves in the shambles. 
                 The books of history are etched with the agony and dilemma that the labour force has always been put through, however, there is a sense of beaming hope that can terminate this prolonged struggle, the opportunity to rewrite history, the chance to equip the deprived. A hope that has manifested as the ILO." className="" />
 
-            <Committees name="Social ,Cultural, and Humanitarian Committee"
+            <Committees name="Social Cultural and Humanitarian Committee"
                 src={SOCHUM}
                 more="/committees/SOCHUM"
                 description="In the current global landscape, constitutes a wrenching scenario where the very aspect of human, social and cultural rights of many are relinquished and a major chunk of the world is racking in the pain of pressing and concerning situations. 
@@ -120,10 +120,10 @@ export default function page() {
                 more="/committees/JCCA"
                 description="The Atlantic countries were like celestial constellations in the tumultuous night sky of the Cold War, each star a nation bound to the liberal banner of capitalism. United by ideology, they formed a cosmic alliance, casting shadows of intrigue and power across the geopolitical landscape, while navigating the perilous cosmic void of international politics.  Together, they visioned to paint a canvas of global confrontation, a dramatic theatre of superpower rivalry, where they emerged superior. However, will they succeed in defying the storm’s fury to conquer the relentless tides of adversity.  "
             />
-
-            <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP} more="/committees/BBMP" />
-
-            <Committees name="GRAM PANCHAYAT" src={BBMP} more="/committees/BBMP" />
+            
+            {/* <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP}  more = "/committees/BBMP"/>
+            
+            <Committees name="GRAM PANCHAYAT" src={BBMP}  more = "/committees/BBMP"/> */}
         </div>
     );
 }
