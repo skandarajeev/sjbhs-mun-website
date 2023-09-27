@@ -19,10 +19,11 @@ export function Navibar() {
           <Link href={props.link}>
             <button
               onClick={() => setOpen(false)}
-              className={`block py-2 ${open ? "w-full" : null}  pl-3 pr-4 ${currentRoute === props.link + "/" || currentRoute === props.link
-                ? " text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                : " text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                }`}
+              className={`block py-2 ${open ? "w-full" : null}  pl-3 pr-4 ${
+                currentRoute === props.link + "/" || currentRoute === props.link
+                  ? " text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  : " text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+              }`}
               aria-current="page"
             >
               {props.name}
@@ -33,18 +34,20 @@ export function Navibar() {
     }
     return (
       <div
-        className={` ${open
-          ? ""
-          : "items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-          }`}
+        className={` ${
+          open
+            ? ""
+            : "items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        }`}
         id="navbar-cta"
       >
         <ul>
           <div
-            className={` ${open
-              ? ""
-              : "flex flex-col font-medium p-4 md:p-0 mt-4  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-gray-700"
-              }`}
+            className={` ${
+              open
+                ? ""
+                : "flex flex-col font-medium p-4 md:p-0 mt-4  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:border-gray-700"
+            }`}
           >
             <TheButton link="/" name="Home" />
             <TheButton link="/about" name="About" />
@@ -113,7 +116,7 @@ export function Navibar() {
 
 export function Footeri() {
   return (
-    <footer class="">
+    <footer className="mt-44">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
@@ -155,7 +158,7 @@ export function Footeri() {
                     {`About`}
                   </a>
                 </li>
-                <li  className="mb-4">
+                <li className="mb-4">
                   <a href="/committees" class="hover:underline">
                     {`Committees`}
                   </a>
@@ -245,7 +248,12 @@ export function Footeri() {
           </div>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <p className="text-sm text-gray-500 text-center dark:text-gray-400">Website Developed by <span className="mun-gradient font-bold">Skanda Rajeev || Pratheek Ravikumar</span></p>
+        <p className="text-sm text-gray-500 text-center dark:text-gray-400">
+          Website Developed by{" "}
+          <span className="mun-gradient font-bold">
+            Skanda Rajeev || Pratheek Ravikumar
+          </span>
+        </p>
       </div>
     </footer>
   );
