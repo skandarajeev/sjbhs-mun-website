@@ -21,13 +21,16 @@ export function Indiregister() {
     }
     console.log("time to fetch");
 
-    const data = await fetch("http://localhost:4000/indipay", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ total: members }),
-    }).then((t) => t.json());
+    const data = await fetch(
+      "https://mun-backed-deploy-0f78572eca2c.herokuapp.com/indipay",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ total: members }),
+      }
+    ).then((t) => t.json());
     console.log(data);
     var options = {
       key: process.env.RAZORPAY_KEY,
@@ -45,7 +48,8 @@ export function Indiregister() {
         const JSONdata = JSON.stringify(info);
 
         // API endpoint where we send htmlForm data.
-        const endpoint = "http://localhost:4000/individual ";
+        const endpoint =
+          "https://mun-backed-deploy-0f78572eca2c.herokuapp.com/individual ";
 
         const options = {
           method: "POST",
@@ -782,14 +786,17 @@ export const DelegationRegistration = () => {
     }
     console.log("time to fetch");
     const people = JSON.stringify({ total: members });
-    const data = await fetch("http://localhost:4000/indipay", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    const data = await fetch(
+      "https://mun-backed-deploy-0f78572eca2c.herokuapp.com/indipay",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      body: people,
-    }).then((t) => t.json());
+        body: people,
+      }
+    ).then((t) => t.json());
 
     var options = {
       key: process.env.RAZORPAY_KEY,
@@ -807,7 +814,8 @@ export const DelegationRegistration = () => {
         const JSONdata = JSON.stringify(info);
 
         // API endpoint where we send htmlForm data.
-        const endpoint = "http://localhost:4000/delegation ";
+        const endpoint =
+          "https://mun-backed-deploy-0f78572eca2c.herokuapp.com/delegation ";
 
         const options = {
           method: "POST",

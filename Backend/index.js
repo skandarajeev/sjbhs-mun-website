@@ -26,6 +26,13 @@ const firebaseConfig = {
   measurementId: "G-MHDL61NQEH",
 };
 
+function ignoreFavicon(req, res, next) {
+  if (req.originalUrl.includes("favicon.ico")) {
+    res.status(204).end();
+  }
+  next();
+}
+
 const fireApp = initializeApp(firebaseConfig);
 const db = getFirestore(fireApp);
 const razorpay = new Razorpay({
@@ -39,7 +46,8 @@ app.use(
     origin: "http://localhost:3000",
   })
 );
-app.listen(4000);
+app.use(ignoreFavicon);
+app.listen(process.env.PORT);
 
 app.get("/", (req, res) => {
   res.status(500).send("hi");
