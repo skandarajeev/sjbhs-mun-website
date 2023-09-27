@@ -19,8 +19,9 @@ const Contact = () => {
 
                 </p>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                  Please contact the below during the hours of 1 p.m to 6 p.m only. Although Whatsapp is enocouraged after 6 p.m
-                </p>
+                Please email your queries before contacting the below given numbers. 
+WhatsApp is encouraged in case it is urgent, we will try to reply as soon as possible.
+If you wish to call these numbers, please do so between 1PM to 6PM.                </p>
                 <div className="mb-8 flex w-full max-w-[370px] md:hidden">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -94,7 +95,7 @@ const Contact = () => {
                       Registration Coordinator
                     </p>
                     <p className="text-base text-body-color">
-                      Ashlin Anthony 
+                      Ashlin Antony 
                     </p>
                     <p className="text-base text-body-color">
                       +91 95913 78485

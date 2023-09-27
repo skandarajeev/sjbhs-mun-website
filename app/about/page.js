@@ -32,7 +32,7 @@ export default function page() {
           {/* rigth */}
           <div className="">
             <div className=" text-white text-[1rem] leading-[2rem] tracking-[1px] mb-[3rem] p-[2rem] items-center text-center">
-              <h1 className="text-[1.5rem] font-bold text-center mb-[0.5rem]">
+              <h1 className="text-[1.5rem] font-bold text-center mb-[0.5rem] mun-gradient">
                 About SJBHS
               </h1>
               <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">{`
