@@ -25,11 +25,11 @@ export default function page() {
               </div>
 
               <ul role="list" class="mb-10 space-y-4 text-left">
+                
                 <li class="flex items-center space-x-3">
-                  <span>Not Eligible for Best Delegation Price</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <span>Security Council is double delegation</span>
+                  <span>
+                    Security Council is  a double delegation
+                  </span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <span> committee, only one of the delegate </span>
