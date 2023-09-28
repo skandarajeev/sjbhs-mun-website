@@ -20,11 +20,11 @@ export default function page() {
           <div className=""></div>
           {/* rigth */}
           <div className="">
-            <div className=" text-white text-[1rem] leading-[2rem] tracking-[1px] mb-[3rem] p-[2rem] items-center text-center">
-              <h1 className="text-[1.5rem] font-bold text-center mb-[0.5rem] mun-gradient">
+            <div className=" text-white text-[1rem] leading-[2rem] tracking-[1px]  p-[2rem] items-center text-center">
+              <h1 className="text-[1.5rem] font-bold text-center  mun-gradient">
                 About SJBHS
               </h1>
-              <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">{`
+              <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem]  lg:px-[20rem] ml-auto">{`
                 SJBHS is not just a school; it's a legacy. For more than a century and a half, we have been nurturing young minds, imparting knowledge, and instilling values that prepare our students for a successful and meaningful life. Our alumni include distinguished individuals who have excelled in various fields, from business and politics to sports and the arts.
                   
                   
@@ -32,20 +32,20 @@ export default function page() {
                                   
             `}</p>
             <br></br>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem]  ml-auto">
             Educational Excellence
             </p>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem] lg:px-[20rem]  ml-auto">
            {` 
 
 At SJBHS, we believe in the transformative power of education. Our dedicated team of educators strives to provide an exceptional learning experience that goes beyond textbooks. We foster critical thinking, creativity, and a sense of responsibility in our students. Our commitment to academic excellence is reflected in our consistently outstanding results.`}
             </p>
 
             <br></br>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem]  ml-auto">
             Holistic Development
             </p>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem] lg:px-[20rem]  ml-auto">
            {` 
 
 
@@ -57,10 +57,10 @@ At SJBHS, we believe in the transformative power of education. Our dedicated tea
   `}</p>
 
 <br></br>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[1rem]   lg:px-[] ml-auto">
             Values and Ethics
             </p>
-            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:px-[5rem] lg:px-[20rem] ml-auto">
            {` 
 
 

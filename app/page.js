@@ -7,13 +7,13 @@ import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg?url";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
-import ILO from "./media/FINAL_ILO.svg?url"
-import SOCHUM from "./media/FINAL_SOCHUM.svg?url"
-import TCC from "./media/FINAL_TCC.svg?url"
-import LS from "./media/FINAL_LS.svg?url"
-import JCCS from "./media/FINAL_JCCS.svg?url"
-import JCCA from "./media/FINAL_JCCA.svg?url"
-import UNSC from "./media/FINAL_UNSC.svg?url"
+import ILO from "./media/FINAL_ILO.png?url"
+import SOCHUM from "./media/FINAL_SOCHUM.png?url"
+import TCC from "./media/FINAL_TCC.png?url"
+import LS from "./media/FINAL_LS.png?url"
+import JCCS from "./media/FINAL_JCCS.png?url"
+import JCCA from "./media/FINAL_JCCA.png?url"
+import UNSC from "./media/FINAL_UNSC.png?url"
 
 import { motion } from "framer-motion";
 
@@ -139,7 +139,6 @@ export default function Home() {
           <p className="font-poppins text-[1.2rem] text-white">27th</p>
           <p className="font-poppins text-[1.2rem] text-white">28th</p>
         </div>
-
 
         <div className="flex gap-[3rem] m-auto mb-2">
           <div>
