@@ -109,7 +109,7 @@ export default function page() {
             />
 
             <Committees
-                name="The Joint Crisis Committee: Sovetsky"
+                name="The Joint Crisis Committee: Sovetskiy"
                 src={JCCS}
                 more="/committees/JCCS"
                 description={`"The Soviets were like a formidable shield, a steel phalanx bound by the oath of Marxist-Leninist ideology. They stood as a majestic mountain range, impervious to the tempestuous winds of uncertainty, a beacon of solidarity in a turbulent sea of global geopolitics, guarding the shores of democracy. Their aspirations of preaching their ideas harvested by the blooded sickle and forged by the mighty hammer. But on the pathway of this vision coming to life stood the greatest roadblock, The entire Western Hemisphere stood against them. Will they be able to rise from the ashes of adversity?"`} />

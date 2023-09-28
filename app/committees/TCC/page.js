@@ -25,7 +25,7 @@ export default function GA() {
             <p
               className={` text-white text-center md:text-left text-[1rem] leading-[2rem] tracking-[1.8px] mb-[3rem] p-[0.6rem] `}
             >
-              As the 1960s was approaching an end, the hierarchy of injustice was beginning to quiver. The blow that had caused this found its sources lying in the sinisterness of greed. Greed penetrates addiction, in this instance the addiction was of dominance, the fanatic need and want to dominate and control over anything and everything disempowered.
+              As the 1960s was approaching an end, the hierarchy of injustice was beginning to quiver. The blow that had caused this found its sources lying in the sinisterness of greed. Greed penetrates addiction, in this instance the addiction was of dominance, the fanatic need and want to dominate and have control over anything and everything disempowered.
               The place that breeds exploitation of power, also breeds deep instilled hatred and the desperate need to dethrone the long ruling monarch of malice.
               The ones that had been confined had discovered courage and had realised that the present times called for a change: a revolution. A revolution where the disempowered rise to power.
 
