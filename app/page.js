@@ -93,7 +93,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center overflow-x-hidden my-[22%] md:my-[20%] lg:my-[5%]">
         <div className="">
-          <h1 className="text-[10vw] lg:text-[5vw] md:text-[8vw] font-proconia  m-auto font-semibold font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
+          <h1 className="text-[10vw] lg:text-[4vw] md:text-[7vw] font-proconia  m-auto font-semibold font-poppins from-yellow-500 to-white bg-clip-text mun-gradient ">
             SJBHSMUN 2023
           </h1>
         </div>
@@ -199,7 +199,7 @@ export default function Home() {
         <div className="flex flex-wrap justify-around">
           <Event name="JCC: Sovetsky" link="/committees/JCCS" src={JCCS} value="70%" mvalue="100%" />
           <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} value="70%" mvalue="100%" />
-          <Event name="LOK SABHA" link="/committees/LS" src={LS} value="60vw" mvalue="102%" />
+          <Event name="Lok Sabha" link="/committees/LS" src={LS} value="60vw" mvalue="102%" />
           <Event name="ILO" link="/committees/ILO" src={ILO} value="70%" mvalue="95%" />
           <Event name="UNSC" link="/committees/UNSC" src={UNSC} value="70%" mvalue="100%" />
           <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value="70%" mvalue="100%" />
@@ -208,7 +208,7 @@ export default function Home() {
       </div>
       <div className="md:mt-0 mt-40">
         <h1 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[4vw] md:text-[5vw] font-bold">
-          LETTER FROM SECRETARY GENERAL
+          LETTER FROM THE SECRETARY GENERAL
         </h1>
         <h2 className="w-full text-center  mun-gradient justify-center text-white  text-[5vw] lg:text-[3vw] md:text-[4vw] font-bold mt-6">
           {`Alden D'Souza`}

@@ -109,7 +109,7 @@ export default function policy () {
               <h3 class="mb-2 text-xl font-bold dark:text-white mun-gradient">Rules with Regard to Registrations</h3>             
               <ul className="list-disc bo leading-7 p-[1.5rem] text-white">
                 <li>The registration fee is to be paid while making the registration. A Razor pay system has been made available through the registration link itself.</li>
-                <li>In case of cancellation after payment, delegates are requested to reach out to the Secretariat with regards to the refund policy.</li>
+                <li className="font-bold">No refunds will be provided.</li>
                 <li>The minimum number of delegates in a delegation is 8, 6+2 (The UNSC is a double delegation committee).</li>
                 <li>Registrations shall be made on a first come-first serve basis. Allotments, however, shall be given taking into consideration preference and experience.</li>
                 <li>Kindly ensure that the phone number submitted at the time of registration is a WhatsApp number.</li>

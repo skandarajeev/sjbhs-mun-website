@@ -8,11 +8,11 @@ export default function page() {
       <section class="">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white mun-gradient">
               REGISTRATION
             </h2>
             <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              {`Have questions or need assistance? Contact our team at mun@sjbhs.edu.in or send a message to 9880330623. We're here to help!`}
+              {`Have questions or need assistance? Contact our team at mun@sjbhs.edu.in or send a message to 7483744587. We're here to help!`}
             </p>
           </div>
           <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0 relative">
@@ -46,7 +46,7 @@ export default function page() {
                   href="/registration/individual"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  "
                 >
-                  OPENING SOON
+                  Register Now!
                 </a>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function page() {
                   href="/registration/delegation"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
                 >
-                  OPENING SOON
+                  Register Now!
                 </a>
               </div>
             </div>

@@ -19,7 +19,7 @@ export default function GA() {
             <p
               className={`${styles.mungradient} text-white font-poppins font-bold  text-center md:text-left text-[5vw] mt-[1rem] mb-[2rem]`}
             >
-              SOVIETSKY
+              SOVETSKY
             </p>
           </div>
           <div className="agenda">
