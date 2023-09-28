@@ -64,11 +64,7 @@ export function Navibar() {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link href="/">
           <button onClick={() => setOpen(false)} className="flex items-center">
-            <Image
-              src={logo}
-              className="h-14 w-auto mr-3"
-              alt="Flowbite Logo"
-            />
+            <Image src={logo} className="h-14 w-auto mr-3" alt="Mun Logo" />
             <span className="self-center text-[0px] md:text-2xl font-semibold whitespace-nowrap dark:text-white">
               SJBHSMUN
             </span>
@@ -120,8 +116,8 @@ export function Footeri() {
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
-              <Image src={logo} class="h-8 w-auto mr-3" alt="FlowBite Logo" />
+            <a href="https://sjbhs.edu.in/" class="flex items-center">
+              <Image src={logo} class="h-8 w-auto mr-3" alt="Mun Logo" />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                 SJBHSMUN
               </span>
@@ -181,7 +177,7 @@ export function Footeri() {
         <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{" "}
-            <a href="https://flowbite.com/" class="hover:underline">
+            <a href="https://sjbhs.edu.in/" class="hover:underline">
               {` St Joseph's Boys' High School`}
             </a>
             . All Rights Reserved.

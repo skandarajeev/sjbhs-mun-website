@@ -8,20 +8,21 @@ const Contact = () => {
           <div className=" -mx-4 lg:justify-between">
             <div className=" flex justify-center w-full px-4 ">
               <div className="mb-12 max-w-[570px] lg:mb-0">
-                <span className="block mb-4 text-base font-semibold text-primary">
-                  Contact Us
-                </span>
                 <h2 className="mun-gradient mb-6 text-[32px] font-bold uppercase text-dark sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                SJBHSMUN is not just an ordinary Model United Nations conference. It is a platform where students will delve into pressing global issues, representing various nations, and working collaboratively to find innovative solutions.
-
+                  SJBHSMUN is not just an ordinary Model United Nations
+                  conference. It is a platform where students will delve into
+                  pressing global issues, representing various nations, and
+                  working collaboratively to find innovative solutions.
                 </p>
                 <p className="text-base leading-relaxed mb-9 text-body-color">
-                Please email your queries before contacting the below given numbers. 
-WhatsApp is encouraged in case it is urgent, we will try to reply as soon as possible.
-If you wish to call these numbers, please do so between 1PM to 6PM.                </p>
+                  Please email your queries before contacting the below given
+                  numbers. WhatsApp is encouraged in case it is urgent, we will
+                  try to reply as soon as possible. If you wish to call these
+                  numbers, please do so between 1PM to 6PM.{" "}
+                </p>
                 <div className="mb-8 flex w-full max-w-[370px] md:hidden">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -38,7 +39,9 @@ If you wish to call these numbers, please do so between 1PM to 6PM.          
                       Our Location
                     </h4>
                     <p className="text-base text-body-color">
-                    27, Museum Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025                    </p>
+                      27, Museum Rd, Shanthala Nagar, Ashok Nagar, Bengaluru,
+                      Karnataka 560025{" "}
+                    </p>
                   </div>
                 </div>
                 {/* RADHIKA CHER */}
@@ -62,17 +65,11 @@ If you wish to call these numbers, please do so between 1PM to 6PM.          
                     <p className="text-base text-body-color mb-2">
                       Teacher Coordinator
                     </p>
-                    <p className="text-base text-body-color">
-                      Mrs. Radhika G
-                    </p>
-                    <p className="text-base text-body-color">
-                      +91 93792 61123
-                    </p>
+                    <p className="text-base text-body-color">Mrs. Radhika G</p>
+                    <p className="text-base text-body-color">+91 93792 61123</p>
                   </div>
-                {/* MUDASIR THE GENERAL */}
+                  {/* MUDASIR THE GENERAL */}
                 </div>
-
-                
                 {/* Ashlin  */}
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
@@ -94,16 +91,10 @@ If you wish to call these numbers, please do so between 1PM to 6PM.          
                     <p className="text-base text-body-color mb-2">
                       Registration Coordinator
                     </p>
-                    <p className="text-base text-body-color">
-                      Ashlin Antony 
-                    </p>
-                    <p className="text-base text-body-color">
-                      +91 95913 78485
-                    </p>
+                    <p className="text-base text-body-color">Ashlin Antony</p>
+                    <p className="text-base text-body-color">+91 95913 78485</p>
                   </div>
                 </div>
-
-
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary bg-opacity-5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <svg
@@ -120,7 +111,7 @@ If you wish to call these numbers, please do so between 1PM to 6PM.          
                       Email Address
                     </h4>
                     <p className="text-base text-body-color">
-                    mun@sjbhs.edu.in
+                      mun@sjbhs.edu.in
                     </p>
                   </div>
                 </div>

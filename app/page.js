@@ -33,7 +33,7 @@ const Event = (details) => {
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring" }}
-          className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
+          className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[28vw] lg:w-[26vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
             <Image
