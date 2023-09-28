@@ -530,6 +530,7 @@ export function Indiregister() {
         <button
           type="submit"
           className="px-4 py-3 bg-blue-600 hover:bg-blue-700 w-[50vw] sm:w-80 mt-10 rounded-md text-white outline-none  shadow-lg transhtmlForm align-left active:scale-90 transition-transhtmlForm "
+          disabled={currentStatus === "done" ? true : false}
         >
           {currentStatus === "entering"
             ? "PAY"
@@ -955,7 +956,7 @@ export const DelegationRegistration = () => {
                       id="total_members"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                       placeholder="8"
-                      min="2"
+                      min="8"
                       max="40"
                       required
                     />
@@ -1011,6 +1012,7 @@ export const DelegationRegistration = () => {
           <button
             type="submit"
             className="px-4 py-3 bg-blue-600 hover:bg-blue-700 w-[50vw] sm:w-80 m-10 rounded-md text-white outline-none  shadow-lg transhtmlForm align-left active:scale-90 transition-transhtmlForm "
+            disabled={currentStatus === "done" ? true : false}
           >
             {currentStatus === "entering"
               ? "PAY"

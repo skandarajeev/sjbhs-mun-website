@@ -4,11 +4,11 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
-  // basePath: process.env.NODE_ENV === "production" ? "/sjbhsmun" : "",
-  // assetPrefix:
-  //   process.env.NODE_ENV === "production"
-  //     ? "http://localhost:3000/sjbhsmun/"
-  //     : "http://localhost:3000/",
+  basePath: process.env.NODE_ENV === "production" ? "/sjbhsmun" : "",
+  assetPrefix:
+    process.env.NODE_ENV === "production"
+      ? "http://localhost:3000/sjbhsmun/"
+      : "http://localhost:3000/",
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg")
