@@ -7,18 +7,7 @@ import circle from "../media/Ellipse 1.svg?url";
 import gavel from "../media/gavel-solid.svg";
 import Image from "next/image";
 import mark from "../media/questionMark.jpg";
-import { Inconsolata } from "next/font/google";
-import { Fuggles } from "next/font/google";
 
-const inconsolata = Inconsolata({
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const fuggles = Fuggles({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export default function page() {
   return (
@@ -37,19 +26,46 @@ export default function page() {
               </h1>
               <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">{`
                 SJBHS is not just a school; it's a legacy. For more than a century and a half, we have been nurturing young minds, imparting knowledge, and instilling values that prepare our students for a successful and meaningful life. Our alumni include distinguished individuals who have excelled in various fields, from business and politics to sports and the arts.
+                  
+                  
 
-                  Educational Excellence
+                                  
+            `}</p>
+            <br></br>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            Educational Excellence
+            </p>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+           {` 
 
-                  At SJBHS, we believe in the transformative power of education. Our dedicated team of educators strives to provide an exceptional learning experience that goes beyond textbooks. We foster critical thinking, creativity, and a sense of responsibility in our students. Our commitment to academic excellence is reflected in our consistently outstanding results.
+At SJBHS, we believe in the transformative power of education. Our dedicated team of educators strives to provide an exceptional learning experience that goes beyond textbooks. We foster critical thinking, creativity, and a sense of responsibility in our students. Our commitment to academic excellence is reflected in our consistently outstanding results.`}
+            </p>
 
-                  Holistic Development
+            <br></br>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            Holistic Development
+            </p>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+           {` 
+
+
 
                   We understand that education is not just about academics. At SJBHS, we emphasize holistic development, nurturing the physical, mental, and emotional well-being of our students. Our wide range of co-curricular activities, sports, and cultural programs ensure that our students grow into well-rounded individuals.
 
                   Values and Ethics
 
-            At the core of our educational philosophy are the values of integrity, compassion, and service. We aim to instill in our students a strong sense of ethics, social responsibility, and empathy towards others. These values guide them in making ethical decisions and contributing positively to society.                
-            `}</p>{" "}
+  `}</p>
+
+<br></br>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+            Values and Ethics
+            </p>
+            <p className="relative h-[100%]  md:text-[1rem] text-center md:p-[5rem]  ml-auto">
+           {` 
+
+
+            At the core of our educational philosophy are the values of integrity, compassion, and service. We aim to instill in our students a strong sense of ethics, social responsibility, and empathy towards others. These values guide them in making ethical decisions and contributing positively to society.           
+  `}</p>
             </div>
           </div>
         </div>
@@ -88,8 +104,8 @@ export default function page() {
           </div>
         </div>
 
-        <div className={`mb-[1rem] font-${fuggles.style.fontFamily}`}>
-          <p className="flex justify-center text-white mun-gradient font-bold text-[3.3vw] md:text-[2.5vw] lg:text-[2vw] leading-[3rem]">
+        <div className={`mb-[1rem] text-center`}>
+          <p className="flex justify-center text-white mun-gradient font-bold text-[3.3vw] md:text-[2.5vw] lg:text-[2vw] leading-[3rem] ">
             To be the change, the one that soars;
             <br />
             In a world of crimes and wars,

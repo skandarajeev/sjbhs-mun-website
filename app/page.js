@@ -16,12 +16,6 @@ import JCCA from "./media/FINAL_JCCA.svg?url";
 import UNSC from "./media/FINAL_UNSC.svg?url";
 
 import { motion } from "framer-motion";
-import { Open_Sans } from "next/font/google";
-
-const open_sans = Open_Sans({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 const Event = (details) => {
   return (
@@ -73,12 +67,6 @@ export default function Home() {
 
   return (
     <>
-      <style jsx global>{`
-        html {
-          font-family: ${open_sans.style.fontFamily};
-        }
-      `}</style>
-
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -143,7 +131,7 @@ export default function Home() {
         className="background-gradient  justify-between text-center flex flex-col  w-[90%] md:w-[60%]   m-auto p-[30px] rounded-[1rem] mt-10 "
       >
         <p className="font-poppins text-white mb-2 ">JOIN US ON</p>
-        <p className="font-poppins mun-gradient text-5xl font-semibold mb-2">
+        <p className="font-poppins mun-gradient text-5xl font-semibold mb-2 tracking-[3px]">
           OCTOBER
         </p>
 
@@ -185,7 +173,7 @@ export default function Home() {
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
         <div className="flex flex-wrap justify-around">
           <Event
-            name="JCC: Sovetsky"
+            name="JCC: Sovetskiy"
             link="/committees/JCCS"
             src={JCCS}
             value="70%"
