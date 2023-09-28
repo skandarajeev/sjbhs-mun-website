@@ -251,7 +251,7 @@ export function Footeri() {
         <p className="text-sm text-gray-500 text-center dark:text-gray-400">
           Website Developed by{" "}
           <span className="mun-gradient font-bold">
-            Skanda Rajeev || Pratheek Ravikumar
+            Pratheek Ravikumar || Skanda Rajeev
           </span>
         </p>
       </div>
