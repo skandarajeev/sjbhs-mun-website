@@ -55,7 +55,7 @@ export function Indiregister() {
           },
           body: JSONdata,
         };
-        alert("Get ready to fetch");
+
         // Send the htmlForm data to our htmlForms API on Vercel and get a response.
         const result = await (await fetch(endpoint, options)).json();
         if (result.result === "success") {

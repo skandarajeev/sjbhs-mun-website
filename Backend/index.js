@@ -85,7 +85,7 @@ app.post("/indipay", async function (req, res) {
     // Create an order -> generate the OrderID -> Send it to the Front-end
     const payment_capture = 1;
     console.log(req.body);
-    const amount = parseInt(1 * parseInt(req.body.total));
+    const amount = parseInt(129 * parseInt(req.body.total));
     const currency = "INR";
     const options = {
       amount: (amount * 100).toString(),
@@ -136,7 +136,7 @@ app.post("/individual", async function (req, res) {
       await setDoc(doc(db, req.body.committee, id.toString()), req.body);
       await setDoc(
         regPage,
-        { id: id, total: regInfo.total + 10 },
+        { id: id, total: regInfo.total + 1 },
         { merge: true }
       );
 
