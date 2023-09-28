@@ -1,7 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
-import Head from "next/head";
-import { Indiregister, DelegationRegistration } from "../components/register";
+
+import Link from "next/link";
 export default function page() {
   return (
     <div className="mb-32">
@@ -40,12 +39,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <a
+                <Link
                   href="/registration/individual"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  "
                 >
                   Register Now!
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -73,12 +72,12 @@ export default function page() {
                 </li>
               </ul>
               <div className="bottom-5 self-center mx-auto absolute">
-                <a
+                <Link
                   href="/registration/delegation"
                   class="text-white bg-primary-600 hover:bg-primary-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900"
                 >
                   Register Now!
-                </a>
+                </Link>
               </div>
             </div>
           </div>
