@@ -7,13 +7,13 @@ import circle from "./media/Ellipse 1.svg?url";
 import Eventlogo from "./media/event-logo.svg?url";
 import Link from "next/link";
 import Tab from "./components/alden/tabs.js";
-import ILO from "./media/FINAL_ILO.png?url"
-import SOCHUM from "./media/FINAL_SOCHUM.png?url"
-import TCC from "./media/FINAL_TCC.png?url"
-import LS from "./media/FINAL_LS.png?url"
-import JCCS from "./media/FINAL_JCCS.png?url"
-import JCCA from "./media/FINAL_JCCA.png?url"
-import UNSC from "./media/FINAL_UNSC.png?url"
+import ILO from "./media/FINAL_ILO.svg?url";
+import SOCHUM from "./media/FINAL_SOCHUM.svg?url";
+import TCC from "./media/FINAL_TCC.svg?url";
+import LS from "./media/FINAL_LS.svg?url";
+import JCCS from "./media/FINAL_JCCS.svg?url";
+import JCCA from "./media/FINAL_JCCA.svg?url";
+import UNSC from "./media/FINAL_UNSC.svg?url";
 
 import { motion } from "framer-motion";
 
@@ -36,7 +36,10 @@ const Event = (details) => {
           className="outerBox mx-2 my-5 md:my-10  w-[40vw] md:w-[29vw] lg:w-[22vw] m-auto shadow-yellow-700 shadow-inner "
         >
           <div className="flex justify-center flex-col items-center  rounded-md  w-[100%] h-[100%] p-6">
-            <Image className={`w-auto  md:mb-8  mb-5 h-24 sm:h-32 lg:h-44 `} src={details.src} />
+            <Image
+              className={`w-auto  md:mb-8  mb-5 h-24 sm:h-32 lg:h-44 `}
+              src={details.src}
+            />
 
             <p className="text-white font-poppins text-center lg:mt-5 md:text-[3vw] text-[4vw] align-middle ">
               {details.name}
@@ -64,8 +67,6 @@ export default function Home() {
 
   return (
     <>
-     
-
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com"></link>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}
@@ -146,7 +147,6 @@ export default function Home() {
               {days}
             </p>
             <p className="font-poppins text-white ">Days</p>
-
           </div>
 
           <div>
@@ -154,24 +154,15 @@ export default function Home() {
               {hours}
             </p>
             <p className="font-poppins text-white">Hours</p>
-
           </div>
-
 
           <div>
             <p className="font-poppins mun-gradient text-[10vw] md:text-[5vw] font-semibold mb-[1rem]">
               {minutes}
             </p>
             <p className="font-poppins text-white">Minutes</p>
-
           </div>
-
         </div>
-
-
-
-
-
       </motion.div>
 
       {/* DATE REVEAL END */}
@@ -181,13 +172,55 @@ export default function Home() {
       <div className=" flex flex-col gap-3 headingText  mx-2 "></div>
       <div className=" flex-col justify-content lg:p-[8rem] mb-20">
         <div className="flex flex-wrap justify-around">
-          <Event name="JCC: Sovetskiy" link="/committees/JCCS" src={JCCS} value="70%" mvalue="100%" />
-          <Event name="JCC: Atlantic" link="/committees/JCCA" src={JCCA} value="70%" mvalue="100%" />
-          <Event name="Lok Sabha" link="/committees/LS" src={LS} value="60vw" mvalue="102%" />
-          <Event name="ILO" link="/committees/ILO" src={ILO} value="70%" mvalue="95%" />
-          <Event name="UNSC" link="/committees/UNSC" src={UNSC} value="70%" mvalue="100%" />
-          <Event name="SOCHUM" link="/committees/SOCHUM" src={SOCHUM} value="70%" mvalue="100%" />
-          <Event name="TCC" link="/committees/TCC" src={TCC} value="70%" mvalue="100%" />
+          <Event
+            name="JCC: Sovetskiy"
+            link="/committees/JCCS"
+            src={JCCS}
+            value="70%"
+            mvalue="100%"
+          />
+          <Event
+            name="JCC: Atlantic"
+            link="/committees/JCCA"
+            src={JCCA}
+            value="70%"
+            mvalue="100%"
+          />
+          <Event
+            name="Lok Sabha"
+            link="/committees/LS"
+            src={LS}
+            value="60vw"
+            mvalue="102%"
+          />
+          <Event
+            name="ILO"
+            link="/committees/ILO"
+            src={ILO}
+            value="70%"
+            mvalue="95%"
+          />
+          <Event
+            name="UNSC"
+            link="/committees/UNSC"
+            src={UNSC}
+            value="70%"
+            mvalue="100%"
+          />
+          <Event
+            name="SOCHUM"
+            link="/committees/SOCHUM"
+            src={SOCHUM}
+            value="70%"
+            mvalue="100%"
+          />
+          <Event
+            name="TCC"
+            link="/committees/TCC"
+            src={TCC}
+            value="70%"
+            mvalue="100%"
+          />
         </div>
       </div>
       <div className="md:mt-0 mt-40">
@@ -203,8 +236,6 @@ export default function Home() {
             className=" flex justify-center w-[100vw] p-[1rem]"
           />
           <Tab className="h-[100%]" />
-
-
         </div>
       </div>
     </>
