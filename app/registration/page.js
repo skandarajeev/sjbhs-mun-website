@@ -11,7 +11,7 @@ export default function page() {
               REGISTRATION
             </h2>
             <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-              {`Have questions or need assistance? Contact our team at mun@sjbhs.edu.in or send a message to 7483744587. We're here to help!`}
+              {`Have questions or need assistance? Contact our team at mun@sjbhs.edu.in or send a message to 7483744587. We're here to help! Check the Policy page before registering. `}
             </p>
           </div>
           <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0 relative">
@@ -25,11 +25,8 @@ export default function page() {
               </div>
 
               <ul role="list" class="mb-10 space-y-4 text-left">
-                
                 <li class="flex items-center space-x-3">
-                  <span>
-                    Security Council is  a double delegation
-                  </span>
+                  <span>Security Council is a double delegation</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <span> committee, only one of the delegate </span>
