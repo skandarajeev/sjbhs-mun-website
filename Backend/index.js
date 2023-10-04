@@ -136,7 +136,7 @@ app.post("/individual", async function (req, res) {
       await setDoc(doc(db, req.body.committee, id.toString()), req.body);
       await setDoc(
         regPage,
-        { id: id, total: regInfo.total + 1 },
+        { id: id, total: parseInt(regInfo.total) + 1 },
         { merge: true }
       );
 
