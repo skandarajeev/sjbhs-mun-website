@@ -1,14 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // When you are ready to build a static export uncomment this
-  output: "export",
-  images: { unoptimized: true },
-  trailingSlash: true,
-  basePath: process.env.NODE_ENV === "production" ? "/sjbhsmun" : "",
-  assetPrefix:
-    process.env.NODE_ENV === "production"
-      ? "http://localhost:3000/sjbhsmun/"
-      : "http:/localhost:3000/",
+  // output: "export",
+  // images: { unoptimized: true },
+  // trailingSlash: true,
+  // basePath: process.env.NODE_ENV === "production" ? "/sjbhsmun" : "",
+  // assetPrefix:
+  //   process.env.NODE_ENV === "production"
+  //     ? "http://localhost:3000/sjbhsmun/"
+  //     : "http:/localhost:3000/",
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.(".svg")
