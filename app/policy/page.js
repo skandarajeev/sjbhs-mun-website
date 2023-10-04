@@ -110,6 +110,7 @@ export default function policy () {
               <ul className="list-disc bo leading-7 p-[1.5rem] text-white">
                 <li>The registration fee is to be paid while making the registration. A Razor pay system has been made available through the registration link itself.</li>
                 <li className="font-bold">No refunds will be provided.</li>
+                <li>The participant must be no more than 19 years old as of 30/06/2023. Violation of this rule will result in removal from the conference</li>
                 <li>The minimum number of delegates in a delegation is 8, 6+2 (The UNSC is a double delegation committee).</li>
                 <li>Registrations shall be made on a first come-first serve basis. Allotments, however, shall be given taking into consideration preference and experience.</li>
                 <li>Kindly ensure that the phone number submitted at the time of registration is a WhatsApp number.</li>

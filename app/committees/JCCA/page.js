@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 import img from "../../media/JCCA.jpg";
 import Image from "next/image";
 import questiomark from "../../media/questionMark.jpg"
+import Link from "next/link";
 
 export default function GA() {
   return (
@@ -18,8 +19,13 @@ export default function GA() {
               ATLANTIC
             </p>
           </div>
-          <div className="agenda">
-            <p></p>
+          <div className="agenda text-white gap-5 flex flex-col mun-gradient font-semibold text-[1.2rem]">
+          <p>
+            OPERATION UNTHINKABLE 
+            </p>
+            <p>
+            Freeze Date: 1945, May 8th
+            </p>
           </div>
           <div className="">
             <p
@@ -46,10 +52,30 @@ export default function GA() {
 
             {/* ----- */}
             <div className="mt-[5rem] mb-[5rem] w-[100%] rounded-xl p-[1rem] flex flex-col">
-              <p className={`${styles.mungradient} flex justify-center mb-[2rem] text-[2rem] font-semibold`}>COMING SOON!</p>
-              <button type="button" class="mb-[1rem] text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 ">Country Matrix</button>
-              <button type="button" class="text-white bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800">Background guide</button>
-
+            <Link className = "flex justify-center " href = "https://docs.google.com/spreadsheets/d/17QI9NBp9A3DLMZlQCAAJvSKXwrxAtV4egpU1UuD59h8/edit#gid=1865576388" >
+                <button
+                  type="button"
+                  
+                  class="mb-[1rem] text-white w-[100%] bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 "
+                >
+                  Country Matrix
+                </button>
+              </Link>
+              
+              <p
+                className={`${styles.mungradient} flex justify-center mt-[2rem] mb-[1rem] text-[2rem] font-semibold`}
+              >
+                COMING SOON!
+              </p>
+              <Link className = "flex justify-center " href = "" >
+                <button
+                  type="button"
+                  
+                  class="mb-[1rem] text-white w-[100%] bg-indigo-500 hover:bg-indigo-800 focus:outline-none focus:ring-4 focus:ring-indigo-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 "
+                >
+                  Background Guide
+                </button>
+              </Link>
             </div>
           </div>
         </div>

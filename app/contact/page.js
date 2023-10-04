@@ -91,8 +91,8 @@ const Contact = () => {
                     <p className="text-base text-body-color mb-2">
                       Registration Coordinator
                     </p>
-                    <p className="text-base text-body-color">Ashlin Antony</p>
-                    <p className="text-base text-body-color">+91 95913 78485</p>
+                    <p className="text-base text-body-color">Fiyoni Jain</p>
+                    <p className="text-base text-body-color">+91 96061 70002</p>
                   </div>
                 </div>
                 <div className="mb-8 flex w-full max-w-[370px]">

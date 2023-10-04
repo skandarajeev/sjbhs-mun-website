@@ -69,57 +69,82 @@ export default function page() {
         <div className="p-[1rem] md:p-[6rem] lg:p-[10rem]">
             <Committees name="International Labour Organisation"
                 src={ILO} more="/committees/ILO"
-                description="In the tapestry of our society, where the threads of labour rights lie in the control of hands that know no bounds and constantly subjects the workforce to mistreatment, disfigured wages and unfit working conditions, the necessity for the presence of a just organisation is imperative.
-                Speaking up in a world where there penetrates a constant fear of uncertainty, ILO gives voice to their concerns and upholds their rights, which would otherwise find themselves in the shambles. 
-                The books of history are etched with the agony and dilemma that the labour force has always been put through, however, there is a sense of beaming hope that can terminate this prolonged struggle, the opportunity to rewrite history, the chance to equip the deprived. A hope that has manifested as the ILO." className="" />
+                description={(
+                    <div>
+                        <p>{`Discussing the labour conditions with specific regards to economic imperialism in underdeveloped and developing countries`}</p>
+                        
+                    </div>
+                )} className="" />
 
             <Committees name="Social Cultural and Humanitarian Committee"
                 src={SOCHUM}
                 more="/committees/SOCHUM"
-                description="In the current global landscape, constitutes a wrenching scenario where the very aspect of human, social and cultural rights of many are relinquished and a major chunk of the world is racking in the pain of pressing and concerning situations. 
-            Persevering for preserving the integrity of these rights that encompass the overall well-being of the people is of utmost necessity. There is a need for a global advocate that works against any form of disregard shown towards these rights of any individuals.
-            This need is fulfilled by a crucible of global compassion, where the world’s conscience is forged in the fires of responsibilities. SOCHUM, a symphony of diverse voices, weaving threads of understanding into a tapestry of hope for a better and more equitable world. "
+                description={(
+                    <div>
+                        <p>{`Protection of the rights and culture of indigenous people with reference to the impacts of climate change.`}</p>
+                        
+                    </div>
+                )}
             />
 
             <Committees name="United Nations Security Council"
                 src={UNSC}
                 more="/committees/UNSC"
-                description={`"In any given scenario, the driving force behind any government should be the betterment of people. Every human being irrespective of what marks their actions cast on the society must be treated with dignity. 
-             Things are not always how we perceive them to be, most often the facts of a scenario remain blurred by the illusions of delusion portrayed to the society. 
-             Fear has creeped its way into our daily life and has strongly established its perpetual state. As a result, it has become a matter of commonality, but what we as a society should not have to adapt to is the terror casted by the darkest shadow that threatens peace, security and the very sense of humanity. "`}
+                description={(
+                    <div>
+                        <p>{`Discussing Alternatives to the ISIL & Al-Qaeda Sanction Regime of the UNSC`}</p>
+                        
+                    </div>
+                )}
             />
 
             <Committees name="Historic Lok Sabha"
                 src={LS}
                 more="/committees/LS"
-                description="The Lok Sabha, India's vibrant parliament, stands out as a beacon amidst the turbulent winds of democracy, like a lighthouse guiding ships through stormy seas. Each elected member, a vivid brushstroke on the canvas of history, shaping the destiny of a nation like the conductor of a grand symphony, orchestrating harmony amidst diverse melodies.
-
-            With the echoes of struggle and freedom as its foundation, the Lok Sabha stands tall, a colossal phoenix rising from the ashes of colonial oppression, igniting the flame of sovereignty that continues to illuminate the dreams and aspirations of more than a billion minds.
-            
-            The Lok Sabha has witnessed the nation grappling with ominous shadows of unrest. The growing tension, stemmed from the relentless Naxal movement that had seeped into the country. A threat loomed, one of potential aggravation from the Union of India, threatening the very fabric of unity. The hallowed halls of the Lok Sabha reverberated with impassioned debates as leaders sought hope. It was an era when the destiny of the nation seemed uncertain and the echoes of those tumultuous times continue to resonate through the corridors of history."
+                description={(
+                    <div>
+                        <p>{`Special Session discussing the Naxalbari Crisis`}</p>
+                        <br></br>
+                        <p>{`Freeze Date: 1967, December 1st`}</p>
+                    </div>
+                )}
             />
 
             <Committees name="The Tricontinental Conference"
                 src={TCC}
                 more="/committees/TCC"
-                description={`"As the 1960s was approaching an end, the hierarchy of injustice was beginning to quiver. The blow that had caused this found its sources lying in the sinisterness of greed. Greed penetrates addiction, in this instance the addiction was of dominance, the fanatic need and want to dominate and control over anything and everything disempowered.  
-                The place that breeds exploitation of power, also breeds deep instilled hatred and the desperate need to dethrone the long ruling monarch of malice. 
-                The ones that had been confined had discovered courage and had realised that the present times called for a change: a revolution. A revolution where the disempowered rise to power.
-                "`}
+                description={(
+                    <div>
+                        <p>{`Addressing the rise of Western Imperialism in Africa, Asia, and Latin America`} </p>
+                        <br></br>
+                        <p>{`Freeze Date: 1966, January 3rd`}</p>
+                    </div>
+                )}
             />
 
             <Committees
                 name="The Joint Crisis Committee: Sovetskiy"
                 src={JCCS}
                 more="/committees/JCCS"
-                description={`"The Soviets were like a formidable shield, a steel phalanx bound by the oath of Marxist-Leninist ideology. They stood as a majestic mountain range, impervious to the tempestuous winds of uncertainty, a beacon of solidarity in a turbulent sea of global geopolitics, guarding the shores of democracy. Their aspirations of preaching their ideas harvested by the blooded sickle and forged by the mighty hammer. But on the pathway of this vision coming to life stood the greatest roadblock, The entire Western Hemisphere stood against them. Will they be able to rise from the ashes of adversity?"`} />
+                description={(
+                    <div>
+                        <p>Agenda : OPERATION UNTHINKABLE</p>
+                        <br></br>
+                         <p>Freeze Date: 1945, May 8th</p>
+                    </div>
+                )} />
 
             <Committees
                 name="The Joint Crisis Committee: Atlantic "
                 src={NATO}
                 more="/committees/JCCA"
-                description="The Atlantic countries were like celestial constellations in the tumultuous night sky of the Cold War, each star a nation bound to the liberal banner of capitalism. United by ideology, they formed a cosmic alliance, casting shadows of intrigue and power across the geopolitical landscape, while navigating the perilous cosmic void of international politics.  Together, they visioned to paint a canvas of global confrontation, a dramatic theatre of superpower rivalry, where they emerged superior. However, will they succeed in defying the storm’s fury to conquer the relentless tides of adversity.  "
-            />
+                description={(
+                    <div>
+                        <p>Agenda : OPERATION UNTHINKABLE</p>
+                        <br></br>
+                         <p>Freeze Date: 1945, May 8th</p>
+                    </div>
+                )}             />
             
             {/* <Committees name="Bruhat Bengaluru Mahanagara Palike: BBMP" src={BBMP}  more = "/committees/BBMP"/>
             
