@@ -3,7 +3,7 @@
 import { Herr_Von_Muellerhoff } from "next/font/google";
 import { styles } from "./components.css";
 import mun_logo from "../media/MUN LOGO.png";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { json } from "react-router-dom";
 export function Indiregister() {
   const [currentStatus, changeStatus] = useState("entering");
@@ -128,7 +128,7 @@ export function Indiregister() {
         event.target.person_two_backupCommittee.value;
       data.person_two_food = event.target.person_two_food.value;
     }
-
+    data.total = members;
     makePayment(data);
 
     // Get data from the htmlForm.
@@ -544,16 +544,16 @@ export function Indiregister() {
       {currentStatus === "done" ? (
         <div
           href="#"
-          className="flex flex-col justify-center item p-10 h-full rounded-lg shadow-emerald-500 shadow-sm bg-black"
+          className="flex flex-col justify-center items-center p-10 h-full mx-24 rounded-lg shadow-emerald-500 shadow-sm bg-black"
         >
-          <p class="mb-3 text-white">
+          <p class="mb-3 text-4xl text-white">
             Congrats you are officially part of SJBHSMUN 2023 🎉
           </p>
 
-          <p class="mb-3 text-white">
+          <p class="mb-3 text-xl text-white">
             {`Take a screen shot of your UUID so you not don't forget`}
           </p>
-          <ul className="list-none mt-14  align-middle">
+          <ul className="list-none mt-14 text-lg">
             {ids.map((person) => (
               <li className="text-white" key={person}>
                 {person[0]} : SJBHSMUN{person[1]}
@@ -572,7 +572,7 @@ export const DelegationRegistration = () => {
   const [members, changeMembers] = useState(0);
   const [ids, putIds] = useState([]);
 
-  const Template = (props) => {
+  const Template = useCallback((props) => {
     return (
       <div className="flex flex-col justify-center items-center mt-11 mx-14 px-5 shadow-lg my-10">
         <h1 className="text-white text-5xl text-center">{props.name}</h1>;
@@ -769,7 +769,7 @@ export const DelegationRegistration = () => {
         </div>
       </div>
     );
-  };
+  }, []);
   const [currentStatus, changeStatus] = useState("entering");
 
   const makePayment = async (info) => {
@@ -955,7 +955,7 @@ export const DelegationRegistration = () => {
                       name="item-weight"
                       id="total_members"
                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                      placeholder="8"
+                      placeholder="0"
                       min="8"
                       max="40"
                       required
@@ -1027,16 +1027,16 @@ export const DelegationRegistration = () => {
       {currentStatus === "done" ? (
         <div
           href="#"
-          class="block h-56 text-2xl p-6   rounded-lg shadow-emerald-500 shadow-sm bg-black"
+          className="flex flex-col justify-center items-center p-10 h-full mx-24 rounded-lg shadow-emerald-500 shadow-sm bg-black"
         >
-          <p class="mb-3 text-white">
+          <p class="mb-3 text-4xl text-white">
             Congrats you are officially part of SJBHSMUN 2023 🎉
           </p>
 
-          <p class="mb-3 text-white">
+          <p class="mb-3 text-xl text-white">
             {`Take a screen shot of your UUID so you not don't forget`}
           </p>
-          <ul className="list-none mt-14  ">
+          <ul className="list-none mt-14 text-lg">
             {ids.map((person) => (
               <li className="text-white" key={person}>
                 {person[0]} : SJBHSMUN{person[1]}
