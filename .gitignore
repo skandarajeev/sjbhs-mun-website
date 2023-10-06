@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /Backend
+/export
 # testing
 /coverage
 
