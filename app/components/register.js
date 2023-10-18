@@ -139,14 +139,17 @@ export function Indiregister() {
   return (
     <div className="flex flex-col justify-center items-center mt-11">
       <h1 className="text-white font-semibold sm:text-5xl text-4xl  text-center">
-        INDIVIDUAL REGISTRATION
+        INTERNAL REGISTRATION
+      </h1>
+      <h1 className="text-gray-500 font-semibold sm:text-md text-md text-center mt-5">
+        {`Only Internal Delegates are allowed to register through this, external delegates won't be refunded`}
       </h1>
       ;{/* register htmlForm */}
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center mb-20"
       >
-        <div className="flex flex-wrap justify-center items-start mt-11">
+        <div className="flex flex-wrap justify-center items-start mt-1">
           <div className="sm:w-auto w-[70vw] mt-11 mx-14 px-5 shadow-lg my-10 ">
             {members === 2 ? (
               <h1 className="text-white text-4xl text-center mb-10">
