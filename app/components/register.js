@@ -141,7 +141,7 @@ export function Indiregister() {
       <h1 className="text-white font-semibold sm:text-5xl text-4xl  text-center">
         INTERNAL REGISTRATION
       </h1>
-      <h1 className="text-gray-500 font-semibold sm:text-md text-md text-center mt-5">
+      <h1 className="text-red-500 font-semibold sm:text-md text-md text-center mt-5">
         {`Only Internal Delegates are allowed to register through this, external delegates won't be refunded`}
       </h1>
       ;{/* register htmlForm */}
@@ -998,7 +998,9 @@ export const DelegationRegistration = () => {
           <h1 className="md:text-6xl text-4xl text-white text-center">
             DELEGATION REGISTRATION
           </h1>
-
+          <h1 className="text-red-500 font-semibold sm:text-md text-md text-center mt-5">
+            {`Only Internal Delegates are allowed to register through this, external delegates won't be refunded`}
+          </h1>
           <div className="flex flex-wrap justify-center items-center mt-11">
             <Template committee="head_delegate" name="HEAD DELEGATE" />;
             {Array.from(Array(members - 1), (e, i) => {
